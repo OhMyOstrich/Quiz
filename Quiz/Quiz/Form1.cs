@@ -12,7 +12,7 @@ namespace Quiz
 {
     public partial class Form1 : Form
     {
-        public int test;
+        //public int test;
         public Form1()
         {
             InitializeComponent();

@@ -19,6 +19,6 @@ namespace Quiz {
     }
 
     public class Question {
-
+        public string test;
     }
 }

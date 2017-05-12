@@ -9,16 +9,22 @@ using System.ComponentModel.DataAnnotations;
 namespace Quiz {
     class Database : DbContext {
         public DbSet<Quiz> Quizzes { get; set; }
-        public DbSet<Question> Questions { get; set; }
     }
 
-    public class Quiz {
+    class Quiz {
         [Key]
-        public string username { get; set; }
-        public ICollection<Question> questions { get; set; }
+        public int ID { get; set; }
+        public string name { get; set; }
+        public virtual ICollection<Question> questions { get; set; }
     }
 
-    public class Question {
-        public string test;
+    class Question {
+        public string questiontext { get; set; }
+        public ICollection<Answer> answers { get; set; }
+    }
+
+    class Answer {
+        public string answertext { get; set; }
+        public bool isanswer { get; set; }
     }
 }

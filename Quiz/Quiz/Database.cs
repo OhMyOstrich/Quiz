@@ -8,10 +8,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Quiz {
     class Database : DbContext {
-        public DbSet<Quiz> Quizzes { get; set; }
+        public DbSet<QuizObject> Quizzes { get; set; }
+
+        public Database() : base("QuizDatabase") {
+
+        }
     }
 
-    class Quiz {
+    class QuizObject {
         [Key]
         public int ID { get; set; }
         public string name { get; set; }
@@ -19,11 +23,15 @@ namespace Quiz {
     }
 
     class Question {
+        [Key]
+        public int ID { get; set; }
         public string questiontext { get; set; }
         public ICollection<Answer> answers { get; set; }
     }
 
     class Answer {
+        [Key]
+        public int ID { get; set; }
         public string answertext { get; set; }
         public bool isanswer { get; set; }
     }

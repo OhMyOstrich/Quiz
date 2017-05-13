@@ -10,7 +10,7 @@ namespace Quiz {
     class Database : DbContext {
         public DbSet<QuizObject> Quizzes { get; set; }
 
-        public Database() : base("QuizDatabase") {
+        public Database() : base("QuizDatabaseAway") {
 
         }
     }

@@ -12,6 +12,7 @@ namespace Quiz {
             Stuff.db.Quizzes.Add(new QuizObject{ name = n, questions = q });
             Stuff.db = null;
             Stuff.db = new QuizDatabase();
+            //BOIIIIIII
         }
     }
 }

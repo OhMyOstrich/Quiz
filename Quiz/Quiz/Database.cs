@@ -8,17 +8,31 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Quiz {
     class Database : DbContext {
-        public DbSet<Quiz> Quizzes { get; set; }
-        public DbSet<Question> Questions { get; set; }
+        public DbSet<QuizObject> Quizzes { get; set; }
+
+        public Database() : base("QuizDatabaseAway") {
+
+        }
     }
 
-    public class Quiz {
+    class QuizObject {
         [Key]
-        public string username { get; set; }
-        public ICollection<Question> questions { get; set; }
+        public int ID { get; set; }
+        public string name { get; set; }
+        public virtual ICollection<Question> questions { get; set; }
     }
 
-    public class Question {
-        public string test;
+    class Question {
+        [Key]
+        public int ID { get; set; }
+        public string questiontext { get; set; }
+        public ICollection<Answer> answers { get; set; }
+    }
+
+    class Answer {
+        [Key]
+        public int ID { get; set; }
+        public string answertext { get; set; }
+        public bool isanswer { get; set; }
     }
 }

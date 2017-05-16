@@ -7,10 +7,10 @@ using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
 
 namespace Quiz {
-    class Database : DbContext {
+    class QuizDatabase : DbContext {
         public DbSet<QuizObject> Quizzes { get; set; }
 
-        public Database() : base("QuizDatabase") {
+        public QuizDatabase() : base("QuizDatabase") {
 
         }
     }

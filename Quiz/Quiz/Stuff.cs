@@ -11,7 +11,8 @@ namespace Quiz {
         public static void AddQuiz(string n, ICollection<Question> q) {
             Stuff.db.Quizzes.Add(new QuizObject{ name = n, questions = q });
             Stuff.db = null;
-            Stuff.db = new QuizDatabase()
+            Stuff.db = new QuizDatabase();
+            //BOIIIIIII
         }
     }
 }

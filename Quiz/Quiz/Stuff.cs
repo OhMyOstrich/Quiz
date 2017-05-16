@@ -14,5 +14,6 @@ namespace Quiz {
             Stuff.db = new QuizDatabase();
             //BOIIIIIII
         }
+
     }
 }

@@ -20,7 +20,9 @@ namespace Quiz
         }
 
         private void button1_Click(object sender, EventArgs e) {
-
+            CreateQuizForm form = new CreateQuizForm();
+            form.Show();
+            this.Hide();
         }
     }
 }

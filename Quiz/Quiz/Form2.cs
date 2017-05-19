@@ -10,11 +10,31 @@ using System.Windows.Forms;
 
 namespace Quiz
 {
-    public partial class Form2 : Form
+    public partial class QuestionForm : Form
     {
-        public Form2()
+        public QuestionForm()
         {
             InitializeComponent();
+        }
+
+        private void questionBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void questionBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void questionBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void questionBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

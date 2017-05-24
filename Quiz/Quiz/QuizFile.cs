@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Quiz {
     class QuizFile {
-        public static QuizObject main;
+        public QuizObject main;
 
-        static void CreateFile() {
+        public void CreateFile() {
             SaveFileDialog saver = new SaveFileDialog();
             saver.Filter = "quiz files (*.quiz)|*.quiz|All files (*.*)|*.*";
             saver.FilterIndex = 1;
@@ -28,6 +28,7 @@ namespace Quiz {
                     writer.WriteLine("Name: " + main.name);
                     writer.WriteLine("Subject: " + main.subject);
                 }
+                FileStream.Close();
             }
         }
     }

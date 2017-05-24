@@ -20,6 +20,7 @@ namespace Quiz {
         public int ID { get; set; }
         public string name { get; set; }
         public string subject { get; set; }
+        public int numofquestions { get; set; }
         public virtual ICollection<Question> questions { get; set; }
     }
 

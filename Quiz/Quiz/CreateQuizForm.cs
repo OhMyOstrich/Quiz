@@ -15,7 +15,8 @@ namespace Quiz {
         }
 
         private void CreateQuizButton_Click(object sender, EventArgs e) {
-            Stuff.AddQuiz(QuizNameTB.Text);
+            //Stuff.AddQuiz(QuizNameTB.Text);
+            QuizObject temp = new QuizObject { };
         }
     }
 }

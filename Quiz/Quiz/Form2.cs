@@ -36,5 +36,18 @@ namespace Quiz
         {
 
         }
+
+        //Set the Labels and QuestionBoxes set to the question put into the load function.
+        private void QuestionForm_Load(object sender, EventArgs e)
+        {
+            Question q = new Question();
+            //The question
+            questionLabel.Text = q.questiontext;
+            //The answers
+            questionBox1.Text = q.answers.ElementAt(0).answertext;
+            questionBox2.Text = q.answers.ElementAt(1).answertext;
+            questionBox3.Text = q.answers.ElementAt(2).answertext;
+            questionBox4.Text = q.answers.ElementAt(3).answertext;
+        }
     }
 }

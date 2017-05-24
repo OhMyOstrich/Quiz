@@ -13,5 +13,9 @@ namespace Quiz {
         public CreateQuizForm() {
             InitializeComponent();
         }
+
+        private void CreateQuizButton_Click(object sender, EventArgs e) {
+            Stuff.AddQuiz(QuizNameTB.Text);
+        }
     }
 }

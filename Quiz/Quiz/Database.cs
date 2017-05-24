@@ -10,7 +10,7 @@ namespace Quiz {
     class QuizDatabase : DbContext {
         public DbSet<QuizObject> Quizzes { get; set; }
 
-        public QuizDatabase() : base("QuizDatabase") {
+        public QuizDatabase() : base("QuizDatabaseAway") {
 
         }
     }
@@ -19,6 +19,8 @@ namespace Quiz {
         [Key]
         public int ID { get; set; }
         public string name { get; set; }
+        public string subject { get; set; }
+        public int numofquestions { get; set; }
         public virtual ICollection<Question> questions { get; set; }
     }
 

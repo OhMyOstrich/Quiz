@@ -5,14 +5,14 @@ namespace Quiz.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Quiz.QuizDatabase>
+    internal sealed class Configuration : DbMigrationsConfiguration<global::Quiz.QuizDatabase>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Quiz.QuizDatabase context)
+        protected override void Seed(global::Quiz.QuizDatabase context)
         {
             //  This method will be called after migrating to the latest version.
 

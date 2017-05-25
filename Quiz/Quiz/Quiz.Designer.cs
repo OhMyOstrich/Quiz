@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quiz));
             this.ExitButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.QuizQuestion = new System.Windows.Forms.GroupBox();
-            this.Option1 = new System.Windows.Forms.RadioButton();
-            this.Option2 = new System.Windows.Forms.RadioButton();
-            this.Option3 = new System.Windows.Forms.RadioButton();
             this.Option4 = new System.Windows.Forms.RadioButton();
+            this.Option3 = new System.Windows.Forms.RadioButton();
+            this.Option2 = new System.Windows.Forms.RadioButton();
+            this.Option1 = new System.Windows.Forms.RadioButton();
+            this.Back = new System.Windows.Forms.Button();
             this.QuizQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,12 +51,13 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(12, 226);
+            this.SubmitButton.Location = new System.Drawing.Point(105, 226);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 1;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // QuizQuestion
             // 
@@ -69,39 +72,6 @@
             this.QuizQuestion.TabStop = false;
             this.QuizQuestion.Text = "What is another name for trash?";
             // 
-            // Option1
-            // 
-            this.Option1.AutoSize = true;
-            this.Option1.Location = new System.Drawing.Point(7, 20);
-            this.Option1.Name = "Option1";
-            this.Option1.Size = new System.Drawing.Size(66, 17);
-            this.Option1.TabIndex = 0;
-            this.Option1.TabStop = true;
-            this.Option1.Text = "Garbage";
-            this.Option1.UseVisualStyleBackColor = true;
-            // 
-            // Option2
-            // 
-            this.Option2.AutoSize = true;
-            this.Option2.Location = new System.Drawing.Point(7, 44);
-            this.Option2.Name = "Option2";
-            this.Option2.Size = new System.Drawing.Size(61, 17);
-            this.Option2.TabIndex = 1;
-            this.Option2.TabStop = true;
-            this.Option2.Text = "Detritus";
-            this.Option2.UseVisualStyleBackColor = true;
-            // 
-            // Option3
-            // 
-            this.Option3.AutoSize = true;
-            this.Option3.Location = new System.Drawing.Point(7, 68);
-            this.Option3.Name = "Option3";
-            this.Option3.Size = new System.Drawing.Size(64, 17);
-            this.Option3.TabIndex = 2;
-            this.Option3.TabStop = true;
-            this.Option3.Text = "Rubbish";
-            this.Option3.UseVisualStyleBackColor = true;
-            // 
             // Option4
             // 
             this.Option4.AutoSize = true;
@@ -114,16 +84,61 @@
             this.Option4.UseVisualStyleBackColor = true;
             this.Option4.CheckedChanged += new System.EventHandler(this.Option4_CheckedChanged);
             // 
+            // Option3
+            // 
+            this.Option3.AutoSize = true;
+            this.Option3.Location = new System.Drawing.Point(7, 68);
+            this.Option3.Name = "Option3";
+            this.Option3.Size = new System.Drawing.Size(64, 17);
+            this.Option3.TabIndex = 2;
+            this.Option3.TabStop = true;
+            this.Option3.Text = "Rubbish";
+            this.Option3.UseVisualStyleBackColor = true;
+            // 
+            // Option2
+            // 
+            this.Option2.AutoSize = true;
+            this.Option2.Location = new System.Drawing.Point(7, 44);
+            this.Option2.Name = "Option2";
+            this.Option2.Size = new System.Drawing.Size(61, 17);
+            this.Option2.TabIndex = 1;
+            this.Option2.TabStop = true;
+            this.Option2.Text = "Detritus";
+            this.Option2.UseVisualStyleBackColor = true;
+            // 
+            // Option1
+            // 
+            this.Option1.AutoSize = true;
+            this.Option1.Location = new System.Drawing.Point(7, 20);
+            this.Option1.Name = "Option1";
+            this.Option1.Size = new System.Drawing.Size(66, 17);
+            this.Option1.TabIndex = 0;
+            this.Option1.TabStop = true;
+            this.Option1.Text = "Garbage";
+            this.Option1.UseVisualStyleBackColor = true;
+            // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(12, 226);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 3;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            // 
             // Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.QuizQuestion);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.ExitButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Quiz";
-            this.Text = "Quiz";
+            this.Text = "Cheney Public Schools Testing";
+            this.Load += new System.EventHandler(this.Quiz_Load);
             this.QuizQuestion.ResumeLayout(false);
             this.QuizQuestion.PerformLayout();
             this.ResumeLayout(false);
@@ -139,5 +154,6 @@
         private System.Windows.Forms.RadioButton Option3;
         private System.Windows.Forms.RadioButton Option2;
         private System.Windows.Forms.RadioButton Option1;
+        private System.Windows.Forms.Button Back;
     }
 }

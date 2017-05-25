@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quiz));
             this.ExitButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
-            this.QuizQuestion = new System.Windows.Forms.GroupBox();
+            this.QuizQuestionAndGroupBox = new System.Windows.Forms.GroupBox();
             this.Option4 = new System.Windows.Forms.RadioButton();
             this.Option3 = new System.Windows.Forms.RadioButton();
             this.Option2 = new System.Windows.Forms.RadioButton();
             this.Option1 = new System.Windows.Forms.RadioButton();
-            this.Back = new System.Windows.Forms.Button();
-            this.QuizQuestion.SuspendLayout();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.QuizQuestionAndGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // ExitButton
@@ -51,7 +51,7 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(105, 226);
+            this.SubmitButton.Location = new System.Drawing.Point(103, 226);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 1;
@@ -59,18 +59,18 @@
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
-            // QuizQuestion
+            // QuizQuestionAndGroupBox
             // 
-            this.QuizQuestion.Controls.Add(this.Option4);
-            this.QuizQuestion.Controls.Add(this.Option3);
-            this.QuizQuestion.Controls.Add(this.Option2);
-            this.QuizQuestion.Controls.Add(this.Option1);
-            this.QuizQuestion.Location = new System.Drawing.Point(12, 12);
-            this.QuizQuestion.Name = "QuizQuestion";
-            this.QuizQuestion.Size = new System.Drawing.Size(260, 208);
-            this.QuizQuestion.TabIndex = 2;
-            this.QuizQuestion.TabStop = false;
-            this.QuizQuestion.Text = "What is another name for trash?";
+            this.QuizQuestionAndGroupBox.Controls.Add(this.Option4);
+            this.QuizQuestionAndGroupBox.Controls.Add(this.Option3);
+            this.QuizQuestionAndGroupBox.Controls.Add(this.Option2);
+            this.QuizQuestionAndGroupBox.Controls.Add(this.Option1);
+            this.QuizQuestionAndGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.QuizQuestionAndGroupBox.Name = "QuizQuestionAndGroupBox";
+            this.QuizQuestionAndGroupBox.Size = new System.Drawing.Size(260, 208);
+            this.QuizQuestionAndGroupBox.TabIndex = 2;
+            this.QuizQuestionAndGroupBox.TabStop = false;
+            this.QuizQuestionAndGroupBox.Text = "What is another name for trash?";
             // 
             // Option4
             // 
@@ -117,30 +117,32 @@
             this.Option1.Text = "Garbage";
             this.Option1.UseVisualStyleBackColor = true;
             // 
-            // Back
+            // BackButton
             // 
-            this.Back.Location = new System.Drawing.Point(12, 226);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 3;
-            this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
+            this.BackButton.Location = new System.Drawing.Point(12, 226);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 3;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
             // 
             // Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.Back);
-            this.Controls.Add(this.QuizQuestion);
+            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.QuizQuestionAndGroupBox);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.ExitButton);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Quiz";
             this.Text = "Cheney Public Schools Testing";
             this.Load += new System.EventHandler(this.Quiz_Load);
-            this.QuizQuestion.ResumeLayout(false);
-            this.QuizQuestion.PerformLayout();
+            this.QuizQuestionAndGroupBox.ResumeLayout(false);
+            this.QuizQuestionAndGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -149,11 +151,11 @@
 
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button SubmitButton;
-        private System.Windows.Forms.GroupBox QuizQuestion;
+        private System.Windows.Forms.GroupBox QuizQuestionAndGroupBox;
         private System.Windows.Forms.RadioButton Option4;
         private System.Windows.Forms.RadioButton Option3;
         private System.Windows.Forms.RadioButton Option2;
         private System.Windows.Forms.RadioButton Option1;
-        private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button BackButton;
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.TempQuestionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -39,7 +40,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.Location = new System.Drawing.Point(0, 367);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button1.Name = "button1";
@@ -56,13 +57,23 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(426, 78);
             this.button2.TabIndex = 1;
             this.button2.Text = "Take Quiz";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // TempQuestionButton
+            // 
+            this.TempQuestionButton.Location = new System.Drawing.Point(0, 288);
+            this.TempQuestionButton.Name = "TempQuestionButton";
+            this.TempQuestionButton.Size = new System.Drawing.Size(426, 71);
+            this.TempQuestionButton.TabIndex = 2;
+            this.TempQuestionButton.Text = "Question?";
+            this.TempQuestionButton.UseVisualStyleBackColor = true;
+            this.TempQuestionButton.Click += new System.EventHandler(this.TempQuestionButton_Click);
             // 
             // Form1
             // 
@@ -71,6 +82,7 @@
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(426, 402);
+            this.Controls.Add(this.TempQuestionButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -94,6 +106,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button TempQuestionButton;
     }
 }
 

@@ -28,7 +28,6 @@ namespace Quiz {
                     writer.WriteLine("Name: " + main.name);
                     writer.WriteLine("Subject: " + main.subject);
                 }
-                FileStream.Close();
             }
         }
     }

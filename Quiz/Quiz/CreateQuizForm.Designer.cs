@@ -26,9 +26,7 @@
             this.QuizNameTB = new System.Windows.Forms.MaskedTextBox();
             this.CreateQuizButton = new System.Windows.Forms.Button();
             this.QuizSubjectTB = new System.Windows.Forms.MaskedTextBox();
-            this.QuizIDTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -56,13 +54,6 @@
             this.QuizSubjectTB.Size = new System.Drawing.Size(100, 20);
             this.QuizSubjectTB.TabIndex = 3;
             // 
-            // QuizIDTextBox
-            // 
-            this.QuizIDTextBox.Location = new System.Drawing.Point(222, 190);
-            this.QuizIDTextBox.Name = "QuizIDTextBox";
-            this.QuizIDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.QuizIDTextBox.TabIndex = 4;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -71,15 +62,7 @@
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(158, 195);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "ID:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -96,9 +79,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 452);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.QuizIDTextBox);
             this.Controls.Add(this.QuizSubjectTB);
             this.Controls.Add(this.CreateQuizButton);
             this.Controls.Add(this.QuizNameTB);
@@ -117,9 +98,7 @@
         private System.Windows.Forms.MaskedTextBox QuizNameTB;
         private System.Windows.Forms.Button CreateQuizButton;
         private System.Windows.Forms.MaskedTextBox QuizSubjectTB;
-        private System.Windows.Forms.MaskedTextBox QuizIDTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }
 }

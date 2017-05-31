@@ -20,5 +20,9 @@ namespace Quiz {
             QuizFile file = new QuizFile { main = temp };
             file.CreateFile();
         }
+
+        private void label1_Click(object sender, EventArgs e) {
+
+        }
     }
 }

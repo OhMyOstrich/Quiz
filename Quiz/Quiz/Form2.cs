@@ -16,8 +16,9 @@ namespace Quiz
         Question q;
         //-----DEBUG-----
         Question question = new Question();
+        private List<Answer> answers;
         //-----DEBUG-----
-        CheckBox[] checkBoxes;
+        private List<CheckBox> checkBoxes;
         //Variable that checks to see how many answers were chosen that were correct, that the user chose.
         private int correctAnswers;
         //THIS one decides how many answers will be correct out of the few.
@@ -25,29 +26,38 @@ namespace Quiz
 
         public QuestionForm()
         {
+            //Initialize the variables
+            answers = new List<Answer>();
+            checkBoxes = new List<CheckBox>();
+            //Adding values to them.
+            for (int i = 0; i < 4; i++)
+            {
+                answers.Add(new Answer());
+                checkBoxes.Add(new CheckBox());
+            }
+
             //-----DEBUG TESTING-----
             question.questiontext = "HOW CANCEROUS AM I?";
 
-            Answer[] answers = question.answers.ToArray();
+            
 
-            answers[0] = new Answer();
             answers[0].answertext = "ULTRA";
             answers[0].isanswer = true;
 
-            //question.answers.ElementAt(1).answertext = "Not at all! D:";
-            //question.answers.ElementAt(1).isanswer = false;
+            answers[1].answertext = "Not at all! D:";
+            answers[1].isanswer = false;
 
-            //question.answers.ElementAt(2).answertext = "Just. kys yourself.";
-            //question.answers.ElementAt(2).isanswer = true;
+            answers[2].answertext = "Just. kys yourself.";
+            answers[2].isanswer = true;
 
-            //question.answers.ElementAt(3).answertext = "BELIEVE IN YOURSELF";
-            //question.answers.ElementAt(3).isanswer = false;
+            answers[3].answertext = "BELIEVE IN YOURSELF";
+            answers[3].isanswer = false;
             //-----DEBUG TESTING-----
 
             setQuestion(question);
 
             //Loops through and ensures that the program knows how many correct answers there are.
-            foreach (Answer answer in q.answers)
+            foreach (Answer answer in answers)
             {
                 if (answer.isanswer)
                 {
@@ -90,16 +100,18 @@ namespace Quiz
             //The question
             questionLabel.Text = q.questiontext;
 
-            //The answers
-            questionBox1.Text = q.answers.ElementAt(0).answertext;
-            questionBox2.Text = q.answers.ElementAt(1).answertext;
-            questionBox3.Text = q.answers.ElementAt(2).answertext;
-            questionBox4.Text = q.answers.ElementAt(3).answertext;
-            //Put each of the question checkboxes into an array to loop through whn the answer button is clicked.
+            //Put each of the question checkboxes into an array to loop through when the answer button is clicked.
             checkBoxes[0] = questionBox1;
             checkBoxes[1] = questionBox2;
             checkBoxes[2] = questionBox3;
             checkBoxes[3] = questionBox4;
+
+            //The answers (sets the text for each of the answers.
+            for (int i = 0; i < 4; i++)
+            {
+                checkBoxes[i].Text = answers[i].answertext;
+            }
+            
         }
 
         private void answerButton_Click(object sender, EventArgs e)

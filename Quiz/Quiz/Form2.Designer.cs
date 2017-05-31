@@ -41,10 +41,10 @@
             // questionBox1
             // 
             this.questionBox1.AutoSize = true;
-            this.questionBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionBox1.Location = new System.Drawing.Point(12, 62);
+            this.questionBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionBox1.Location = new System.Drawing.Point(12, 68);
             this.questionBox1.Name = "questionBox1";
-            this.questionBox1.Size = new System.Drawing.Size(108, 28);
+            this.questionBox1.Size = new System.Drawing.Size(88, 22);
             this.questionBox1.TabIndex = 0;
             this.questionBox1.Text = "Answer 1";
             this.questionBox1.UseVisualStyleBackColor = true;
@@ -53,10 +53,10 @@
             // questionBox2
             // 
             this.questionBox2.AutoSize = true;
-            this.questionBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionBox2.Location = new System.Drawing.Point(12, 96);
             this.questionBox2.Name = "questionBox2";
-            this.questionBox2.Size = new System.Drawing.Size(108, 28);
+            this.questionBox2.Size = new System.Drawing.Size(88, 22);
             this.questionBox2.TabIndex = 0;
             this.questionBox2.Text = "Answer 2";
             this.questionBox2.UseVisualStyleBackColor = true;
@@ -65,10 +65,10 @@
             // questionBox3
             // 
             this.questionBox3.AutoSize = true;
-            this.questionBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionBox3.Location = new System.Drawing.Point(12, 130);
+            this.questionBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionBox3.Location = new System.Drawing.Point(12, 124);
             this.questionBox3.Name = "questionBox3";
-            this.questionBox3.Size = new System.Drawing.Size(108, 28);
+            this.questionBox3.Size = new System.Drawing.Size(88, 22);
             this.questionBox3.TabIndex = 0;
             this.questionBox3.Text = "Answer 3";
             this.questionBox3.UseVisualStyleBackColor = true;
@@ -77,10 +77,10 @@
             // questionBox4
             // 
             this.questionBox4.AutoSize = true;
-            this.questionBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionBox4.Location = new System.Drawing.Point(12, 164);
+            this.questionBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionBox4.Location = new System.Drawing.Point(12, 152);
             this.questionBox4.Name = "questionBox4";
-            this.questionBox4.Size = new System.Drawing.Size(108, 28);
+            this.questionBox4.Size = new System.Drawing.Size(88, 22);
             this.questionBox4.TabIndex = 0;
             this.questionBox4.Text = "Answer 4";
             this.questionBox4.UseVisualStyleBackColor = true;
@@ -89,10 +89,10 @@
             // questionLabel
             // 
             this.questionLabel.AutoSize = true;
-            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.Location = new System.Drawing.Point(9, 9);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(65, 17);
+            this.questionLabel.Size = new System.Drawing.Size(73, 20);
             this.questionLabel.TabIndex = 1;
             this.questionLabel.Text = "Question";
             // 
@@ -104,7 +104,7 @@
             // 
             // answerButton
             // 
-            this.answerButton.Location = new System.Drawing.Point(329, 169);
+            this.answerButton.Location = new System.Drawing.Point(329, 151);
             this.answerButton.Name = "answerButton";
             this.answerButton.Size = new System.Drawing.Size(75, 23);
             this.answerButton.TabIndex = 2;
@@ -116,13 +116,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 204);
+            this.ClientSize = new System.Drawing.Size(416, 182);
             this.Controls.Add(this.answerButton);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.questionBox4);
             this.Controls.Add(this.questionBox3);
             this.Controls.Add(this.questionBox2);
             this.Controls.Add(this.questionBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QuestionForm";
             this.Text = "Question #";
             this.Load += new System.EventHandler(this.QuestionForm_Load);

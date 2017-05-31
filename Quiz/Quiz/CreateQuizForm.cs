@@ -16,7 +16,8 @@ namespace Quiz {
 
         private void CreateQuizButton_Click(object sender, EventArgs e) {
             //Stuff.AddQuiz(QuizNameTB.Text);
-            QuizObject temp = new QuizObject { ID = int.Parse(QuizIDTextBox.Text), name = QuizNameTB.Text, subject = QuizSubjectTB.Text};
+            QuizObject temp = new QuizObject { //ID = int.Parse(QuizIDTextBox.Text),
+                name = QuizNameTB.Text, subject = QuizSubjectTB.Text};
             QuizFile file = new QuizFile { main = temp };
             file.CreateFile();
         }

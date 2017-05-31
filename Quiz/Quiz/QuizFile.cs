@@ -24,7 +24,7 @@ namespace Quiz {
                 Stream FileStream = saver.OpenFile();
 
                 using (StreamWriter writer = new StreamWriter(FileStream)) {
-                    writer.WriteLine("ID: " + main.ID);
+                    //writer.WriteLine("ID: " + main.ID);
                     writer.WriteLine("Name: " + main.name);
                     writer.WriteLine("Subject: " + main.subject);
                 }

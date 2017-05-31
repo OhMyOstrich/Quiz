@@ -29,5 +29,11 @@ namespace Quiz
         {
 
         }
+
+        private void TempQuestionButton_Click(object sender, EventArgs e)
+        {
+            QuestionForm form = new QuestionForm();
+            form.Show();
+        }
     }
 }

@@ -21,14 +21,15 @@ namespace Quiz {
         public string name { get; set; }
         public string subject { get; set; }
         public int numofquestions { get; set; }
-        public virtual ICollection<Question> questions { get; set; }
+        public virtual List<Question> questions { get; set; }
     }
 
     class Question {
         [Key]
         public int ID { get; set; }
+        public bool wasAnsweredCorrectly { get; set; }
         public string questiontext { get; set; }
-        public ICollection<Answer> answers { get; set; }
+        public List<Answer> answers { get; set; }
     }
 
     class Answer {

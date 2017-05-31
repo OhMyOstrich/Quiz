@@ -44,9 +44,9 @@
             this.questionBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionBox1.Location = new System.Drawing.Point(12, 62);
             this.questionBox1.Name = "questionBox1";
-            this.questionBox1.Size = new System.Drawing.Size(50, 28);
+            this.questionBox1.Size = new System.Drawing.Size(108, 28);
             this.questionBox1.TabIndex = 0;
-            this.questionBox1.Text = "  n";
+            this.questionBox1.Text = "Answer 1";
             this.questionBox1.UseVisualStyleBackColor = true;
             this.questionBox1.CheckedChanged += new System.EventHandler(this.questionBox1_CheckedChanged);
             // 
@@ -104,12 +104,13 @@
             // 
             // answerButton
             // 
-            this.answerButton.Location = new System.Drawing.Point(316, 168);
+            this.answerButton.Location = new System.Drawing.Point(329, 169);
             this.answerButton.Name = "answerButton";
             this.answerButton.Size = new System.Drawing.Size(75, 23);
             this.answerButton.TabIndex = 2;
             this.answerButton.Text = "Answer";
             this.answerButton.UseVisualStyleBackColor = true;
+            this.answerButton.Click += new System.EventHandler(this.answerButton_Click);
             // 
             // QuestionForm
             // 

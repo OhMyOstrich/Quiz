@@ -27,6 +27,12 @@ namespace Quiz {
                     //writer.WriteLine("ID: " + main.ID);
                     writer.WriteLine("Name: " + main.name);
                     writer.WriteLine("Subject: " + main.subject);
+
+                    for(int i = 0; i < main.numofquestions; i++) {
+
+                        writer.WriteLine((i+1).ToString() + ": " + main.questions[i]);
+                         
+                    }
                 }
             }
         }

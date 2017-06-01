@@ -17,7 +17,13 @@ namespace Quiz {
         private void CreateQuizButton_Click(object sender, EventArgs e) {
             //Stuff.AddQuiz(QuizNameTB.Text);
             QuizObject temp = new QuizObject { //ID = int.Parse(QuizIDTextBox.Text),
-                name = QuizNameTB.Text, subject = QuizSubjectTB.Text};
+                name = QuizNameTB.Text, subject = QuizSubjectTB.Text, numofquestions = QuestionsListBox.Items.Count};
+            
+            for (int i = 0; i < QuestionsListBox.Items.Count; i++) {
+                Question q = QuestionsListBox.Items[i];
+                temp.questions.Add(q);
+            }
+
             QuizFile file = new QuizFile { main = temp };
             file.CreateFile();
         }
@@ -27,7 +33,7 @@ namespace Quiz {
         }
 
         private void AddButton_Click(object sender, EventArgs e) {
-            List<Answer> temp = new List<Answer>();
+            List<Answer> temp = new List<Answer>();          
             temp.Add(new Answer { answertext = Answer1Box.Text, isanswer = Answer1Check.Checked });
             temp.Add(new Answer { answertext = Answer2Box.Text, isanswer = Answer2Check.Checked });
             temp.Add(new Answer { answertext = Answer3Box.Text, isanswer = Answer3Check.Checked });

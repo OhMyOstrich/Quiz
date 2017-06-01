@@ -22,6 +22,8 @@ namespace Quiz {
         public string subject { get; set; }
         public int numofquestions { get; set; }
         public virtual List<Question> questions { get; set; }
+
+       
     }
 
     class Question {
@@ -30,6 +32,10 @@ namespace Quiz {
         public bool wasAnsweredCorrectly { get; set; }
         public string questiontext { get; set; }
         public List<Answer> answers { get; set; }
+
+        public override string ToString() {
+            return questiontext;
+        }
     }
 
     class Answer {

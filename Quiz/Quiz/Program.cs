@@ -17,7 +17,7 @@ namespace Quiz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreateQuizForm());
+            Application.Run(new Form1());
 
             //RegistryKey e = Registry.LocalMachine.CreateSubKey("Software");
             //RegistryKey key = Registry.LocalMachine.CreateSubKey("\\Software\\Classes");

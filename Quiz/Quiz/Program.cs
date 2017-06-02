@@ -24,8 +24,8 @@ namespace Quiz
             //RegistryKey rk = Registry.LocalMachine.CreateSubKey("\\Software\\Classes\\.quiz");
             //rk.SetValue("DefaultIcon", "C:\\Users\\julien\\Downloads\\Mario.ico");
 
-            Registry.CurrentUser.CreateSubKey("\\SOFTWARE\\Classes\\Julien");
-            Registry.SetValue("HKEY_CURRENT_USER\\SOFTWARE\\Classes\\.quiz", "DefaultIcon", "C:\\Users\\julien\\Downloads\\Mario.ico");
+            //Registry.CurrentUser.CreateSubKey("\\SOFTWARE\\Classes\\Julien");
+            //Registry.SetValue("HKEY_CURRENT_USER\\SOFTWARE\\Classes\\.quiz", "DefaultIcon", "C:\\Users\\julien\\Downloads\\Mario.ico");
         }
     }
 }

@@ -36,6 +36,7 @@
             this.questionLabel = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.answerButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // questionBox1
@@ -104,26 +105,38 @@
             // 
             // answerButton
             // 
-            this.answerButton.Location = new System.Drawing.Point(329, 151);
+            this.answerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerButton.Location = new System.Drawing.Point(12, 180);
             this.answerButton.Name = "answerButton";
-            this.answerButton.Size = new System.Drawing.Size(75, 23);
+            this.answerButton.Size = new System.Drawing.Size(698, 37);
             this.answerButton.TabIndex = 2;
             this.answerButton.Text = "Answer";
             this.answerButton.UseVisualStyleBackColor = true;
             this.answerButton.Click += new System.EventHandler(this.answerButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(675, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
             // QuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 182);
+            this.ClientSize = new System.Drawing.Size(722, 229);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.answerButton);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.questionBox4);
             this.Controls.Add(this.questionBox3);
             this.Controls.Add(this.questionBox2);
             this.Controls.Add(this.questionBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuestionForm";
             this.Text = "Question #";
             this.Load += new System.EventHandler(this.QuestionForm_Load);
@@ -141,5 +154,6 @@
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button answerButton;
+        private System.Windows.Forms.Label label1;
     }
 }

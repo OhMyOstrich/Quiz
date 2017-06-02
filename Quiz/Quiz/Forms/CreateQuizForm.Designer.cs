@@ -245,7 +245,7 @@
             this.MinimizeBox = false;
             this.Name = "CreateQuizForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "s";
+            this.Text = "Create Quiz";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -106,6 +106,7 @@
             this.DeleteButton.TabIndex = 9;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // CountButton
             // 

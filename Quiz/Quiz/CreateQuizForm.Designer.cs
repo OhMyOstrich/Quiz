@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateQuizForm));
             this.QuizNameTB = new System.Windows.Forms.MaskedTextBox();
             this.CreateQuizButton = new System.Windows.Forms.Button();
             this.QuizSubjectTB = new System.Windows.Forms.MaskedTextBox();
@@ -103,6 +104,7 @@
             this.Controls.Add(this.CreateQuizButton);
             this.Controls.Add(this.QuizNameTB);
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CreateQuizForm";

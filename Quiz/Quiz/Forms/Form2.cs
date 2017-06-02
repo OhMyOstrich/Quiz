@@ -38,7 +38,7 @@ namespace Quiz
             //Adding values to them.
             for (int i = 0; i < 3; i++)
             {
-                q.Add(new Question());
+                q.Add(new Question { answers = new List<Answer>()});
             }
 
             for (int i = 0; i < 4; i++) {
@@ -49,11 +49,11 @@ namespace Quiz
             //-----DEBUG TESTING START-----
             question.questiontext = "HOW CANCEROUS AM I?";
 
-            for (int i = 0; i < 3; i++)
-            {
-                q[i].answers = new List<Answer>();
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    q[i].answers = new List<Answer>();
                 
-            }
+            //}
 
             for (int b = 0; b < 3; b++) {
                 for (int i = 0; i < 4; i++) {

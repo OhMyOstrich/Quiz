@@ -18,6 +18,10 @@ namespace Quiz {
             //Stuff.AddQuiz(QuizNameTB.Text);
             QuizObject temp = new QuizObject {name = QuizNameTB.Text, subject = QuizSubjectTB.Text, numofquestions = QuestionsListBox.Items.Count};
 
+            foreach(var x in QuestionsListBox.Items) {
+                
+            }
+
             //for (int i = 0; i < poop.; i++) {
             //    Question q = new Question { questiontext = QuestionsListBox.Items[0].};
             //    temp.questions.Add(QuestionsListBox.Items[i]);

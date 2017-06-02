@@ -16,10 +16,10 @@ namespace Quiz {
 
         private void CreateQuizButton_Click(object sender, EventArgs e) {
             //Stuff.AddQuiz(QuizNameTB.Text);
-            QuizObject temp = new QuizObject {name = QuizNameTB.Text, subject = QuizSubjectTB.Text, numofquestions = QuestionsListBox.Items.Count};
+            QuizObject temp = new QuizObject {name = QuizNameTB.Text, subject = QuizSubjectTB.Text, numofquestions = QuestionsListBox.Items.Count, questions = new List<Question>()};
 
-            foreach(var x in QuestionsListBox.Items) {
-                
+            foreach(Question x in QuestionsListBox.Items) {
+                temp.questions.Add(x);
             }
 
             //for (int i = 0; i < poop.; i++) {

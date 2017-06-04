@@ -90,6 +90,7 @@
     <Compile Include="Forms\Quiz.Designer.cs">
       <DependentUpon>Quiz.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeQuiz.cs" />
     <EmbeddedResource Include="Forms\CreateQuizForm.resx">
       <DependentUpon>CreateQuizForm.cs</DependentUpon>
     </EmbeddedResource>

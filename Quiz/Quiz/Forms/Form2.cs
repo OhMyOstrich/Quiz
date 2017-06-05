@@ -39,6 +39,7 @@ namespace Quiz
             for (int i = 0; i < 3; i++)
             {
                 q.Add(new Question { answers = new List<Answer>()});
+                q[i] = new Question();
             }
 
             for (int i = 0; i < 4; i++) {
@@ -47,19 +48,21 @@ namespace Quiz
             }
 
             //-----DEBUG TESTING START-----
-            question.questiontext = "HOW CANCEROUS AM I?";
 
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    q[i].answers = new List<Answer>();
-                
-            //}
+
+            for (int i = 0; i < 3; i++)
+            {
+                q[i].answers = new List<Answer>();
+
+            }
 
             for (int b = 0; b < 3; b++) {
                 for (int i = 0; i < 4; i++) {
                     q[b].answers.Add(new Answer());
                 }
             }
+
+            q[0].questiontext = "HOW CANCEROUS AM I?";
 
             q[0].answers[0].answertext = "ULTRA";
             q[0].answers[0].isanswer = true;
@@ -77,8 +80,7 @@ namespace Quiz
 
             
             //Question 2
-            question1.questiontext = "Who do I like?";
-            q[0].questiontext = question1.questiontext;
+            q[1].questiontext = "Who do I like?";
 
             q[1].answers[0].answertext = "Not going to say";
             q[1].answers[0].isanswer = true;
@@ -111,7 +113,7 @@ namespace Quiz
             q[2] = question2;
             //-----DEBUG TESTING END-----
 
-            setQuestion(q);
+            //setQuestion(q);
 
             //Loops through and ensures that the program knows how many correct answers there are.
             foreach (Answer answer in answers)
@@ -155,7 +157,7 @@ namespace Quiz
         {
             
             //The question
-            questionLabel.Text = question.questiontext;
+            questionLabel.Text = q[0].questiontext;
 
             //Put each of the question checkboxes into an array to loop through when the answer button is clicked.
             checkBoxes[0] = questionBox1;
@@ -164,9 +166,9 @@ namespace Quiz
             checkBoxes[3] = questionBox4;
 
             //The answers (sets the text for each of the answers.
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
             {
-                checkBoxes[i].Text = q[i].answers[i].answertext;
+                checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
             }
             
         }
@@ -182,7 +184,7 @@ namespace Quiz
 
             for (int i = 0; i < 4; i++)
             {
-                checkBoxes[i].Text = question.answers[i].answertext;
+                checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
             }
 
 

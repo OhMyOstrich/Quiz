@@ -25,6 +25,13 @@ namespace Quiz
             this.Hide();
         }
 
+        private void TakeQuiz_Click(object sender, EventArgs e)
+        {
+            Quiz form = new Quiz();
+            form.Show();
+            this.Hide();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -34,6 +41,7 @@ namespace Quiz
         {
             QuestionForm form = new QuestionForm();
             form.Show();
+            this.Hide();
         }
     }
 }

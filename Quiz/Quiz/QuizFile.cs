@@ -13,15 +13,15 @@ using System.Windows.Forms;
 
 namespace Quiz {
     public class QuizFile {
-        public QuizObject main;
+        public static QuizObject main;
 
         public QuizFile()
         {
-            this.main = new QuizObject();
+            //this.main = new QuizObject();
         }
 
         public QuizFile(QuizObject obj) {
-            this.main = obj;
+            //this.main = obj;
         }
 
         public void CreateFile() {
@@ -54,7 +54,7 @@ namespace Quiz {
             }
         }
 
-        public QuizObject OpenFile() {
+        public static QuizObject OpenFile() {
             try {
                 OpenFileDialog openFile = new OpenFileDialog();
                 openFile.Filter = "Quiz files (*.quiz)|*.quiz";

@@ -42,12 +42,10 @@ namespace Quiz {
                         foreach(Answer a in main.questions[i].answers)
                         {
                             writer.WriteLine(a);
-                            if (a.isanswer)
-                            {
+                            if (a.isanswer) {
                                 writer.WriteLine("True");
                             }
-                            else
-                            {
+                            else {
                                 writer.WriteLine("False");
                             }
                         }
@@ -56,47 +54,37 @@ namespace Quiz {
             }
         }
 
-        public QuizObject OpenFile()
-        {
+        public QuizObject OpenFile() {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.Filter = "Quiz files (*.quiz)|*.quiz";
 
-            if(openFile.ShowDialog() == DialogResult.OK)
-            {
+            if(openFile.ShowDialog() == DialogResult.OK) {
                 Stream fileStream = openFile.OpenFile();
 
-                using(StreamReader reader = new StreamReader(fileStream))
-                {
+                using (StreamReader reader = new StreamReader(fileStream)) {
                     main.name = reader.ReadLine().Remove(0, 5);
                     main.subject = reader.ReadLine().Remove(0, 9);
                     main.questions = new List<Question>();
                     
-                    while(reader.Peek() > 0)
-                    {
+                    while(reader.Peek() > 0) {
                         Question quest = new Question();
                         quest.questiontext = reader.ReadLine().Remove(0, 2);
                         quest.answers = new List<Answer>();
-                        for(int i = 0; i < 8; i++)
-                        {
-                            if(i%2 > 0)
-                            {
+                        for(int i = 0; i < 8; i++) {
+                            if(i%2 > 0) {
                                 Answer ans = new Answer();
                                 ans.answertext = reader.ReadLine();
-                                if (reader.ReadLine().Equals("True"))
-                                {
+                                if (reader.ReadLine().Equals("True")) {
                                     ans.isanswer = true;
                                 }
                                 quest.answers.Add(ans);
                             }
-                            
                         }
                         main.questions.Add(quest);
                         main.numofquestions++;
                     }
-
                 }
             }
-
             return main;
         }
     }

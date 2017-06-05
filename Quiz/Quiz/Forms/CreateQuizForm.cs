@@ -32,7 +32,12 @@ namespace Quiz {
         }
 
         private void button3_Click(object sender, EventArgs e) {
-            MessageBox.Show("There are " + QuestionsListBox.Items.Count + " questions in this quiz", "Question Counted");
+            if (QuestionsListBox.Items.Count == 0 || QuestionsListBox.Items.Count > 1) {
+                MessageBox.Show("There are " + QuestionsListBox.Items.Count + " questions in this quiz", "Question Counted");
+            } else {
+                MessageBox.Show("There is " + QuestionsListBox.Items.Count + " question in this quiz", "Question Counted");
+            }
+            
         }
 
         private void AddButton_Click(object sender, EventArgs e) {

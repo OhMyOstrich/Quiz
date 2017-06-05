@@ -20,7 +20,7 @@ namespace Quiz
         Question question1 = new Question();
         Question question2 = new Question();
         //--Debug--
-        private List<Answer> answers;
+
         private List<CheckBox> checkBoxes;
         //Variable that checks to see how many answers were chosen that were correct, that the user chose.
         private int correctAnswers;
@@ -32,14 +32,18 @@ namespace Quiz
         public QuestionForm()
         {
             //Initialize the variables
-            answers = new List<Answer>();
+
             checkBoxes = new List<CheckBox>();
             q = new List<Question>();
             //Adding values to them.
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 q.Add(new Question());
-                answers.Add(new Answer());
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+
                 checkBoxes.Add(new CheckBox());
             }
 
@@ -48,7 +52,6 @@ namespace Quiz
 
             for (int i = 0; i < 3; i++)
             {
-                q.Add(new Question());
                 q[i].answers = new List<Answer>();
                 for(int b = 0; b < 4; b++)
                 {
@@ -108,7 +111,7 @@ namespace Quiz
             setQuestion(q);
 
             //Loops through and ensures that the program knows how many correct answers there are.
-            foreach (Answer answer in answers)
+            foreach (Answer answer in q[currentQuestionNumber].answers)
             {
                 if (answer.isanswer)
                 {
@@ -158,11 +161,11 @@ namespace Quiz
             checkBoxes[3] = questionBox4;
 
             //The answers (sets the text for each of the answers.
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
-                checkBoxes[i].Text = q[i].answers[i].answertext;
+                checkBoxes[i].Text = q[0].answers[i].answertext;
             }
-            
+
         }
 
         private void answerButton_Click(object sender, EventArgs e)
@@ -183,13 +186,13 @@ namespace Quiz
             //The answers (sets the text for each of the answers.)
             for (int i = 0; i < 4; i++)
             {
-                checkBoxes[i].Text = answers[i].answertext;
+                checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
             }
             //Loop through each of the questions, and check to see if the correct answers were chosen.
             for (int i = 0; i < 4; i++)
             {
                 //Check what the user selected against what is actually correct
-                if(checkBoxes[i].Checked && answers[i].isanswer)
+                if(checkBoxes[i].Checked && q[currentQuestionNumber].answers[i].isanswer)
                 {
                     correctAnswers += 1;
                     if (correctAnswers == setCorrectAnswers)

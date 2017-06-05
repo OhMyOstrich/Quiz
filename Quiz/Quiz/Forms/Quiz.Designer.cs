@@ -36,13 +36,16 @@
             this.Option3 = new System.Windows.Forms.RadioButton();
             this.Option2 = new System.Windows.Forms.RadioButton();
             this.Option1 = new System.Windows.Forms.RadioButton();
-            this.BackButton = new System.Windows.Forms.Button();
+            this.PrevButton = new System.Windows.Forms.Button();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.QuestionSelector = new System.Windows.Forms.ComboBox();
+            this.QuestionNumberLbl = new System.Windows.Forms.Label();
             this.QuizQuestionAndGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(196, 226);
+            this.ExitButton.Location = new System.Drawing.Point(121, 320);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 0;
@@ -51,7 +54,7 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(104, 226);
+            this.SubmitButton.Location = new System.Drawing.Point(121, 289);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 1;
@@ -65,9 +68,9 @@
             this.QuizQuestionAndGroupBox.Controls.Add(this.Option3);
             this.QuizQuestionAndGroupBox.Controls.Add(this.Option2);
             this.QuizQuestionAndGroupBox.Controls.Add(this.Option1);
-            this.QuizQuestionAndGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.QuizQuestionAndGroupBox.Location = new System.Drawing.Point(20, 53);
             this.QuizQuestionAndGroupBox.Name = "QuizQuestionAndGroupBox";
-            this.QuizQuestionAndGroupBox.Size = new System.Drawing.Size(260, 208);
+            this.QuizQuestionAndGroupBox.Size = new System.Drawing.Size(277, 208);
             this.QuizQuestionAndGroupBox.TabIndex = 2;
             this.QuizQuestionAndGroupBox.TabStop = false;
             this.QuizQuestionAndGroupBox.Text = "What is another name for trash?";
@@ -117,22 +120,51 @@
             this.Option1.Text = "Garbage";
             this.Option1.UseVisualStyleBackColor = true;
             // 
-            // BackButton
+            // PrevButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(12, 226);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
-            this.BackButton.TabIndex = 3;
-            this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.PrevButton.Location = new System.Drawing.Point(20, 289);
+            this.PrevButton.Name = "PrevButton";
+            this.PrevButton.Size = new System.Drawing.Size(75, 23);
+            this.PrevButton.TabIndex = 3;
+            this.PrevButton.Text = "Previous";
+            this.PrevButton.UseVisualStyleBackColor = true;
+            // 
+            // NextButton
+            // 
+            this.NextButton.Location = new System.Drawing.Point(222, 289);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(75, 23);
+            this.NextButton.TabIndex = 4;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            // 
+            // QuestionSelector
+            // 
+            this.QuestionSelector.FormattingEnabled = true;
+            this.QuestionSelector.Location = new System.Drawing.Point(264, 11);
+            this.QuestionSelector.Name = "QuestionSelector";
+            this.QuestionSelector.Size = new System.Drawing.Size(33, 21);
+            this.QuestionSelector.TabIndex = 5;
+            // 
+            // QuestionNumberLbl
+            // 
+            this.QuestionNumberLbl.AutoSize = true;
+            this.QuestionNumberLbl.Location = new System.Drawing.Point(20, 19);
+            this.QuestionNumberLbl.Name = "QuestionNumberLbl";
+            this.QuestionNumberLbl.Size = new System.Drawing.Size(49, 13);
+            this.QuestionNumberLbl.TabIndex = 6;
+            this.QuestionNumberLbl.Text = "Question";
             // 
             // Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.BackButton);
+            this.ClientSize = new System.Drawing.Size(318, 355);
+            this.Controls.Add(this.QuestionNumberLbl);
+            this.Controls.Add(this.QuestionSelector);
+            this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.PrevButton);
             this.Controls.Add(this.QuizQuestionAndGroupBox);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.ExitButton);
@@ -144,6 +176,7 @@
             this.QuizQuestionAndGroupBox.ResumeLayout(false);
             this.QuizQuestionAndGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -156,6 +189,9 @@
         private System.Windows.Forms.RadioButton Option3;
         private System.Windows.Forms.RadioButton Option2;
         private System.Windows.Forms.RadioButton Option1;
-        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button PrevButton;
+        private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.ComboBox QuestionSelector;
+        private System.Windows.Forms.Label QuestionNumberLbl;
     }
 }

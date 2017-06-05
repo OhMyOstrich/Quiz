@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace Quiz {
     class Stuff {
         public static QuizDatabase db = new QuizDatabase();
-        public static QuizObject currentquiz;
+        //public static QuizObject currentquiz;
         public static StreamReader sr;
-        public static void AddQuiz(string n, ICollection<Question> q) {
+        public static void AddQuiz(string n, List<Question> q) {
             Stuff.db.Quizzes.Add(new QuizObject { name = n, questions = q });
             Stuff.db.SaveChanges();
             Stuff.db = null;

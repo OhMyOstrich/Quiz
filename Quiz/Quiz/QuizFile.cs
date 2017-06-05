@@ -12,23 +12,31 @@ using System.Windows.Forms;
 
 
 namespace Quiz {
-    class QuizFile {
+    public class QuizFile {
         public QuizObject main;
+
+
+        public QuizFile(QuizObject obj) {
+            this.main = obj;
+        }
 
         public void CreateFile() {
             SaveFileDialog saver = new SaveFileDialog();
-            saver.Filter = "quiz files (*.quiz)|*.quiz|All files (*.*)|*.*";
+            saver.Filter = "Quiz files (*.quiz)|*.quiz";
             saver.FilterIndex = 1;
 
             if (saver.ShowDialog() == DialogResult.OK) {
                 Stream FileStream = saver.OpenFile();
 
                 using (StreamWriter writer = new StreamWriter(FileStream)) {
-                    writer.WriteLine("ID: " + main.ID);
+                    //writer.WriteLine("ID: " + main.ID);
                     writer.WriteLine("Name: " + main.name);
                     writer.WriteLine("Subject: " + main.subject);
+
+                    for(int i = 0; i < main.numofquestions; i++) {
+                        writer.WriteLine((i+1).ToString() + ": " + main.questions[i]);
+                    }
                 }
-                FileStream.Close();
             }
         }
     }

@@ -49,14 +49,14 @@
             this.QuizNameTB.Location = new System.Drawing.Point(103, 23);
             this.QuizNameTB.Name = "QuizNameTB";
             this.QuizNameTB.Size = new System.Drawing.Size(141, 20);
-            this.QuizNameTB.TabIndex = 1;
+            this.QuizNameTB.TabIndex = 0;
             // 
             // FinishButton
             // 
             this.FinishButton.Location = new System.Drawing.Point(271, 430);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(75, 23);
-            this.FinishButton.TabIndex = 2;
+            this.FinishButton.TabIndex = 14;
             this.FinishButton.Text = "Finish";
             this.FinishButton.UseVisualStyleBackColor = true;
             this.FinishButton.Click += new System.EventHandler(this.CreateQuizButton_Click);
@@ -66,7 +66,7 @@
             this.QuizSubjectTB.Location = new System.Drawing.Point(103, 51);
             this.QuizSubjectTB.Name = "QuizSubjectTB";
             this.QuizSubjectTB.Size = new System.Drawing.Size(141, 20);
-            this.QuizSubjectTB.TabIndex = 3;
+            this.QuizSubjectTB.TabIndex = 1;
             // 
             // label1
             // 
@@ -93,7 +93,7 @@
             this.AddButton.Location = new System.Drawing.Point(271, 287);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
-            this.AddButton.TabIndex = 8;
+            this.AddButton.TabIndex = 11;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -103,7 +103,7 @@
             this.DeleteButton.Location = new System.Drawing.Point(271, 313);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.DeleteButton.TabIndex = 9;
+            this.DeleteButton.TabIndex = 12;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -113,7 +113,7 @@
             this.CountButton.Location = new System.Drawing.Point(271, 339);
             this.CountButton.Name = "CountButton";
             this.CountButton.Size = new System.Drawing.Size(75, 23);
-            this.CountButton.TabIndex = 10;
+            this.CountButton.TabIndex = 13;
             this.CountButton.Text = "Count";
             this.CountButton.UseVisualStyleBackColor = true;
             this.CountButton.Click += new System.EventHandler(this.button3_Click);
@@ -124,7 +124,7 @@
             this.QuestionsListBox.Location = new System.Drawing.Point(370, 23);
             this.QuestionsListBox.Name = "QuestionsListBox";
             this.QuestionsListBox.Size = new System.Drawing.Size(227, 433);
-            this.QuestionsListBox.TabIndex = 11;
+            this.QuestionsListBox.TabIndex = 15;
             // 
             // richTextBox1
             // 
@@ -132,7 +132,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(29, 122);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(215, 83);
-            this.richTextBox1.TabIndex = 16;
+            this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
             // Answer1Box
@@ -140,7 +140,7 @@
             this.Answer1Box.Location = new System.Drawing.Point(93, 220);
             this.Answer1Box.Name = "Answer1Box";
             this.Answer1Box.Size = new System.Drawing.Size(151, 54);
-            this.Answer1Box.TabIndex = 21;
+            this.Answer1Box.TabIndex = 4;
             this.Answer1Box.Text = "";
             // 
             // Answer2Box
@@ -148,7 +148,7 @@
             this.Answer2Box.Location = new System.Drawing.Point(93, 282);
             this.Answer2Box.Name = "Answer2Box";
             this.Answer2Box.Size = new System.Drawing.Size(151, 54);
-            this.Answer2Box.TabIndex = 22;
+            this.Answer2Box.TabIndex = 6;
             this.Answer2Box.Text = "";
             // 
             // Answer3Box
@@ -156,7 +156,7 @@
             this.Answer3Box.Location = new System.Drawing.Point(93, 342);
             this.Answer3Box.Name = "Answer3Box";
             this.Answer3Box.Size = new System.Drawing.Size(151, 54);
-            this.Answer3Box.TabIndex = 23;
+            this.Answer3Box.TabIndex = 8;
             this.Answer3Box.Text = "";
             // 
             // Answer4Box
@@ -164,7 +164,7 @@
             this.Answer4Box.Location = new System.Drawing.Point(93, 402);
             this.Answer4Box.Name = "Answer4Box";
             this.Answer4Box.Size = new System.Drawing.Size(151, 54);
-            this.Answer4Box.TabIndex = 24;
+            this.Answer4Box.TabIndex = 10;
             this.Answer4Box.Text = "";
             // 
             // label7
@@ -183,7 +183,7 @@
             this.Answer1Check.Location = new System.Drawing.Point(16, 222);
             this.Answer1Check.Name = "Answer1Check";
             this.Answer1Check.Size = new System.Drawing.Size(73, 17);
-            this.Answer1Check.TabIndex = 30;
+            this.Answer1Check.TabIndex = 3;
             this.Answer1Check.Text = "Answer 1:";
             this.Answer1Check.UseVisualStyleBackColor = true;
             // 
@@ -193,7 +193,7 @@
             this.Answer2Check.Location = new System.Drawing.Point(16, 284);
             this.Answer2Check.Name = "Answer2Check";
             this.Answer2Check.Size = new System.Drawing.Size(73, 17);
-            this.Answer2Check.TabIndex = 31;
+            this.Answer2Check.TabIndex = 5;
             this.Answer2Check.Text = "Answer 2:";
             this.Answer2Check.UseVisualStyleBackColor = true;
             // 
@@ -203,7 +203,7 @@
             this.Answer3Check.Location = new System.Drawing.Point(16, 346);
             this.Answer3Check.Name = "Answer3Check";
             this.Answer3Check.Size = new System.Drawing.Size(73, 17);
-            this.Answer3Check.TabIndex = 32;
+            this.Answer3Check.TabIndex = 7;
             this.Answer3Check.Text = "Answer 3:";
             this.Answer3Check.UseVisualStyleBackColor = true;
             // 
@@ -213,7 +213,7 @@
             this.Answer4Check.Location = new System.Drawing.Point(16, 408);
             this.Answer4Check.Name = "Answer4Check";
             this.Answer4Check.Size = new System.Drawing.Size(73, 17);
-            this.Answer4Check.TabIndex = 33;
+            this.Answer4Check.TabIndex = 9;
             this.Answer4Check.Text = "Answer 4:";
             this.Answer4Check.UseVisualStyleBackColor = true;
             // 

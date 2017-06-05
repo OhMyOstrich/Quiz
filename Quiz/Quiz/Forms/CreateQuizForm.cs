@@ -16,7 +16,11 @@ namespace Quiz {
 
         private void CreateQuizButton_Click(object sender, EventArgs e) {
             //Stuff.AddQuiz(QuizNameTB.Text);
-            QuizObject temp = new QuizObject {name = QuizNameTB.Text, subject = QuizSubjectTB.Text, numofquestions = QuestionsListBox.Items.Count};
+            QuizObject temp = new QuizObject {name = QuizNameTB.Text, subject = QuizSubjectTB.Text, numofquestions = QuestionsListBox.Items.Count, questions = new List<Question>()};
+
+            foreach(Question x in QuestionsListBox.Items) {
+                temp.questions.Add(x);
+            }
 
             //for (int i = 0; i < poop.; i++) {
             //    Question q = new Question { questiontext = QuestionsListBox.Items[0].};
@@ -28,7 +32,12 @@ namespace Quiz {
         }
 
         private void button3_Click(object sender, EventArgs e) {
-            MessageBox.Show("There are " + QuestionsListBox.Items.Count + " questions in this quiz", "Question Counted");
+            if (QuestionsListBox.Items.Count == 0 || QuestionsListBox.Items.Count > 1) {
+                MessageBox.Show("There are " + QuestionsListBox.Items.Count + " questions in this quiz", "Question Counted");
+            } else {
+                MessageBox.Show("There is " + QuestionsListBox.Items.Count + " question in this quiz", "Question Counted");
+            }
+            
         }
 
         private void AddButton_Click(object sender, EventArgs e) {

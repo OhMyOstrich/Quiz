@@ -36,25 +36,33 @@ namespace Quiz
             checkBoxes = new List<CheckBox>();
             q = new List<Question>();
             //Adding values to them.
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
-                q.Add(new Question());
+                q.Add(new Question { answers = new List<Answer>()});
+                q[i] = new Question();
+            }
+
+            for (int i = 0; i < 4; i++) {
                 answers.Add(new Answer());
                 checkBoxes.Add(new CheckBox());
             }
 
             //-----DEBUG TESTING START-----
-            question.questiontext = "HOW CANCEROUS AM I?";
+
 
             for (int i = 0; i < 3; i++)
             {
-                q.Add(new Question());
                 q[i].answers = new List<Answer>();
-                for(int b = 0; b < 4; b++)
-                {
-                    q[i].answers.Add(new Answer());
+
+            }
+
+            for (int b = 0; b < 3; b++) {
+                for (int i = 0; i < 4; i++) {
+                    q[b].answers.Add(new Answer());
                 }
             }
+
+            q[0].questiontext = "HOW CANCEROUS AM I?";
 
             q[0].answers[0].answertext = "ULTRA";
             q[0].answers[0].isanswer = true;
@@ -70,9 +78,9 @@ namespace Quiz
 
 
 
-            q[0] = question;
+            
             //Question 2
-            question1.questiontext = "Who do I like?";
+            q[1].questiontext = "Who do I like?";
 
             q[1].answers[0].answertext = "Not going to say";
             q[1].answers[0].isanswer = true;
@@ -90,7 +98,7 @@ namespace Quiz
             //Question 3
             question2.questiontext = "Which of these are garbage?";
 
-            q[2].answers[0].answertext = "The Album 'Dopethrone' by Electric Wizard";
+            q[2].answers[0].answertext = "The Album 'One More Light' by Linkin Park";
             q[2].answers[0].isanswer = true;
 
             q[2].answers[1].answertext = "Twenty One Pilots";
@@ -105,7 +113,7 @@ namespace Quiz
             q[2] = question2;
             //-----DEBUG TESTING END-----
 
-            setQuestion(q);
+            //setQuestion(q);
 
             //Loops through and ensures that the program knows how many correct answers there are.
             foreach (Answer answer in answers)
@@ -149,7 +157,7 @@ namespace Quiz
         {
             
             //The question
-            questionLabel.Text = q[currentQuestionNumber].questiontext;
+            questionLabel.Text = q[0].questiontext;
 
             //Put each of the question checkboxes into an array to loop through when the answer button is clicked.
             checkBoxes[0] = questionBox1;
@@ -160,7 +168,7 @@ namespace Quiz
             //The answers (sets the text for each of the answers.
             for (int i = 0; i < 4; i++)
             {
-                checkBoxes[i].Text = q[i].answers[i].answertext;
+                checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
             }
             
         }
@@ -172,7 +180,7 @@ namespace Quiz
             question = q[currentQuestionNumber];
 
             //The question
-            questionLabel.Text = q[currentQuestionNumber].questiontext;
+            questionLabel.Text = question.questiontext;
 
             for (int i = 0; i < 4; i++)
             {

@@ -43,5 +43,12 @@ namespace Quiz
             form.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            QuizFile open = new QuizFile();
+            QuizObject obj = open.OpenFile();
+            TakeQuiz take = new TakeQuiz(obj);
+        }
     }
 }

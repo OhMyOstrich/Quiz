@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
-            this.TakeQuiz = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.TempQuestionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -50,21 +50,21 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // TakeQuiz
+            // button2
             // 
-            this.TakeQuiz.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TakeQuiz.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TakeQuiz.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TakeQuiz.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.TakeQuiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TakeQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.TakeQuiz.Location = new System.Drawing.Point(0, 0);
-            this.TakeQuiz.Name = "TakeQuiz";
-            this.TakeQuiz.Size = new System.Drawing.Size(426, 78);
-            this.TakeQuiz.TabIndex = 1;
-            this.TakeQuiz.Text = "Take Quiz";
-            this.TakeQuiz.UseVisualStyleBackColor = true;
-            this.TakeQuiz.Click += new System.EventHandler(this.TakeQuiz_Click);
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(426, 78);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Take Quiz";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // TempQuestionButton
             // 
@@ -84,7 +84,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(426, 402);
             this.Controls.Add(this.TempQuestionButton);
-            this.Controls.Add(this.TakeQuiz);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
@@ -107,7 +107,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button TakeQuiz;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button TempQuestionButton;
     }
 }

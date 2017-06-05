@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Quiz {
     class Stuff {
         public static QuizDatabase db = new QuizDatabase();
-        //public static QuizObject currentquiz;
+        public static QuizObject currentquiz;
         public static StreamReader sr;
         public static void AddQuiz(string n, List<Question> q) {
             Stuff.db.Quizzes.Add(new QuizObject { name = n, questions = q });
@@ -22,10 +22,6 @@ namespace Quiz {
             Stuff.db.SaveChanges();
             Stuff.db = null;
             Stuff.db = new QuizDatabase();
-        }
-
-        public static void CreateQuizFile(int ID, string name, string subject, int noq) {
-            
         }
 
     }

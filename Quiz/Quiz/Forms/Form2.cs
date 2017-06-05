@@ -36,84 +36,15 @@ namespace Quiz
             checkBoxes = new List<CheckBox>();
             q = new List<Question>();
             //Adding values to them.
-            for (int i = 0; i < 3; i++)
-            {
-                q.Add(new Question { answers = new List<Answer>()});
-                q[i] = new Question();
-            }
+            
 
-            for (int i = 0; i < 4; i++) {
-                answers.Add(new Answer());
+
+            for (int i = 0; i < 4; i++)
+            {
                 checkBoxes.Add(new CheckBox());
             }
 
-            //-----DEBUG TESTING START-----
-
-
-            for (int i = 0; i < 3; i++)
-            {
-                q[i].answers = new List<Answer>();
-
-            }
-
-            for (int b = 0; b < 3; b++) {
-                for (int i = 0; i < 4; i++) {
-                    q[b].answers.Add(new Answer());
-                }
-            }
-
-            q[0].questiontext = "HOW CANCEROUS AM I?";
-
-            q[0].answers[0].answertext = "ULTRA";
-            q[0].answers[0].isanswer = true;
-
-            q[0].answers[1].answertext = "Not at all! D:";
-            q[0].answers[1].isanswer = false;
-
-            q[0].answers[2].answertext = "Just. kys yourself.";
-            q[0].answers[2].isanswer = true;
-
-            q[0].answers[3].answertext = "BELIEVE IN YOURSELF";
-            q[0].answers[3].isanswer = false;
-
-
-
-            
-            //Question 2
-            q[1].questiontext = "Who do I like?";
-
-            q[1].answers[0].answertext = "Not going to say";
-            q[1].answers[0].isanswer = true;
-
-            q[1].answers[1].answertext = "Haha, still not gonna say";
-            q[1].answers[1].isanswer = true;
-
-            q[1].answers[2].answertext = "Nah";
-            q[1].answers[2].isanswer = true;
-
-            q[1].answers[3].answertext = "Some person";
-            q[1].answers[3].isanswer = false;
-            
-            q[1] = question1;
-            //Question 3
-            question2.questiontext = "Which of these are garbage?";
-
-            q[2].answers[0].answertext = "The Album 'One More Light' by Linkin Park";
-            q[2].answers[0].isanswer = true;
-
-            q[2].answers[1].answertext = "Twenty One Pilots";
-            q[2].answers[1].isanswer = true;
-
-            q[2].answers[2].answertext = "Lord of the Rings";
-            q[2].answers[2].isanswer = false;
-
-            q[2].answers[3].answertext = "Unity Game Engine";
-            q[2].answers[3].isanswer = false;
-
-            q[2] = question2;
-            //-----DEBUG TESTING END-----
-
-            //setQuestion(q);
+         
 
             //Loops through and ensures that the program knows how many correct answers there are.
             foreach (Answer answer in answers)
@@ -125,11 +56,6 @@ namespace Quiz
             }
 
             InitializeComponent();
-        }
-
-        void setQuestion(List<Question> question)
-        {
-            q = question;
         }
 
         private void questionBox1_CheckedChanged(object sender, EventArgs e)

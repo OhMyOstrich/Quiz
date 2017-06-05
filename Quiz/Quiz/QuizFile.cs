@@ -88,8 +88,9 @@ namespace Quiz {
                 }
                 return main;
             } catch (Exception e) {
-                MessageBox.Show(e, "Error", MessageBoxButtons.OK);
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK);
             }
+            return null;
             
         }
     }

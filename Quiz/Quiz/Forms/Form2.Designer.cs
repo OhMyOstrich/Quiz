@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionForm));
             this.questionBox1 = new System.Windows.Forms.CheckBox();
             this.questionBox2 = new System.Windows.Forms.CheckBox();
             this.questionBox3 = new System.Windows.Forms.CheckBox();
@@ -110,7 +111,7 @@
             this.answerButton.Name = "answerButton";
             this.answerButton.Size = new System.Drawing.Size(698, 37);
             this.answerButton.TabIndex = 2;
-            this.answerButton.Text = "Answer";
+            this.answerButton.Text = "Submit";
             this.answerButton.UseVisualStyleBackColor = true;
             this.answerButton.Click += new System.EventHandler(this.answerButton_Click);
             // 
@@ -127,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 229);
+            this.ClientSize = new System.Drawing.Size(715, 229);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.answerButton);
             this.Controls.Add(this.questionLabel);
@@ -135,6 +136,7 @@
             this.Controls.Add(this.questionBox3);
             this.Controls.Add(this.questionBox2);
             this.Controls.Add(this.questionBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "QuestionForm";

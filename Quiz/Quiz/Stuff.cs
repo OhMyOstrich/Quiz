@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Quiz {
-    class Stuff {
+    static class Stuff {
         public static QuizDatabase db = new QuizDatabase();
         public static QuizObject currentquiz;
         public static StreamReader sr;

@@ -13,6 +13,7 @@ namespace Quiz
     
     public partial class QuestionForm : Form
     {
+
         private List<Question> q;
         int currentQuestionNumber = 0;
         Question question = new Question();
@@ -28,35 +29,30 @@ namespace Quiz
         int setCorrectAnswers;
         //This one is universal among the questions, and adds one if all correct answers in a question are selected.
         public static int realCorrectAnswers = 0;
+        public QuizObject main = Stuff.currentquiz;
 
         public QuestionForm()
         {
+            CreateQuizWindow(main);
+
             //Initialize the variables
             answers = new List<Answer>();
             checkBoxes = new List<CheckBox>();
             q = new List<Question>();
-            //Adding values to them.
-            
-
 
             for (int i = 0; i < 4; i++)
             {
                 checkBoxes.Add(new CheckBox());
             }
-
-         
-
-            //Loops through and ensures that the program knows how many correct answers there are.
-            foreach (Answer answer in answers)
-            {
-                if (answer.isanswer)
-                {
-                    setCorrectAnswers += 1;
-                }
-            }
-
             InitializeComponent();
         }
+
+        private void CreateQuizWindow(QuizObject quiz)
+        {
+            Quiz form = new Quiz();
+            form.Show();
+        }
+
 
         private void questionBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -81,7 +77,23 @@ namespace Quiz
         //Set the Labels and QuestionBoxes set to the question put into the load function.
         private void QuestionForm_Load(object sender, EventArgs e)
         {
-            
+
+            Stuff.currentquiz = QuizFile.OpenFile();
+
+            foreach(Question question in Stuff.currentquiz.questions)
+            {
+                
+            }
+
+            //Loops through and ensures that the program knows how many correct answers there are.
+            foreach (Answer answer in answers)
+            {
+                if (answer.isanswer)
+                {
+                    setCorrectAnswers += 1;
+                }
+            }
+
             //The question
             questionLabel.Text = q[0].questiontext;
 
@@ -101,6 +113,10 @@ namespace Quiz
 
         private void answerButton_Click(object sender, EventArgs e)
         {
+
+
+
+
             //Set which question to be loaded
             currentQuestionNumber++;
             question = q[currentQuestionNumber];

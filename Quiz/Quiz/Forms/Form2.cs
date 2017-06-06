@@ -85,7 +85,7 @@ namespace Quiz
             }
 
             //Loops through and ensures that the program knows how many correct answers there are.
-            foreach (Answer answer in answers)
+            foreach (Answer answer in q[currentQuestionNumber].answers)
             {
                 if (answer.isanswer)
                 {
@@ -113,6 +113,39 @@ namespace Quiz
         private void answerButton_Click(object sender, EventArgs e)
         {
 
+            //-----Make sure the answer selected is correct.-----
+            //Loop through each of the questions, and check to see if the correct answers were chosen.
+            for (int i = 0; i < 4; i++)
+            {
+                //Check what the user selected against what is actually correct
+                if (checkBoxes[i].Checked && q[currentQuestionNumber].answers[i].isanswer)
+                {
+                    correctAnswers++;
+                }
+            }
+
+            if (correctAnswers == setCorrectAnswers)
+            {
+                realCorrectAnswers++;
+                label1.Text = realCorrectAnswers.ToString();
+            }
+
+            //Set the question to have been correctly answered, if the user answered correctly.
+            if (correctAnswers == setCorrectAnswers)
+            {
+                q[currentQuestionNumber].wasAnsweredCorrectly = true;
+            }
+            else
+            {
+                q[currentQuestionNumber].wasAnsweredCorrectly = false;
+            }
+
+            
+            //---------------------------------------------------
+
+            setCorrectAnswers = 0;
+            correctAnswers = 0;
+
             //Set which question to be loaded
             currentQuestionNumber++;
             question = q[currentQuestionNumber];
@@ -125,26 +158,13 @@ namespace Quiz
                 checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
             }
 
-            //Loop through each of the questions, and check to see if the correct answers were chosen.
-            for (int i = 0; i < 4; i++)
+            //Loops through and ensures that the program knows how many correct answers there are.
+            foreach (Answer answer in q[currentQuestionNumber].answers)
             {
-                //Check what the user selected against what is actually correct
-                if(checkBoxes[i].Checked && q[currentQuestionNumber].answers[i].isanswer)
+                if (answer.isanswer)
                 {
-                    correctAnswers += 1;
-                    if (correctAnswers == setCorrectAnswers)
-                    {
-                        realCorrectAnswers++;
-                        label1.Text = realCorrectAnswers.ToString();
-                    }
+                    setCorrectAnswers += 1;
                 }
-            }
-            //Set the question to have been correctly answered, if the user answered correctly.
-            if(correctAnswers == setCorrectAnswers)
-            {
-                q[currentQuestionNumber].wasAnsweredCorrectly = true;
-            } else {
-                q[currentQuestionNumber].wasAnsweredCorrectly = false;
             }
         }
     }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quiz));
-            this.ExitButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.QuizQuestionAndGroupBox = new System.Windows.Forms.GroupBox();
             this.Option4 = new System.Windows.Forms.RadioButton();
@@ -42,15 +41,6 @@
             this.QuestionNumberLbl = new System.Windows.Forms.Label();
             this.QuizQuestionAndGroupBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.Location = new System.Drawing.Point(121, 320);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(75, 23);
-            this.ExitButton.TabIndex = 0;
-            this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = true;
             // 
             // SubmitButton
             // 
@@ -160,14 +150,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(318, 355);
+            this.ClientSize = new System.Drawing.Size(318, 324);
             this.Controls.Add(this.QuestionNumberLbl);
             this.Controls.Add(this.QuestionSelector);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PrevButton);
             this.Controls.Add(this.QuizQuestionAndGroupBox);
             this.Controls.Add(this.SubmitButton);
-            this.Controls.Add(this.ExitButton);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Quiz";
@@ -181,8 +170,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.GroupBox QuizQuestionAndGroupBox;
         private System.Windows.Forms.RadioButton Option4;

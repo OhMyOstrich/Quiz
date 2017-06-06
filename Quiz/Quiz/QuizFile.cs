@@ -9,19 +9,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 
 namespace Quiz {
     public class QuizFile {
-        public static QuizObject main;
+        public QuizObject main;
 
         public QuizFile()
         {
-            //this.main = new QuizObject();
+            this.main = new QuizObject();
         }
 
         public QuizFile(QuizObject obj) {
-            //this.main = obj;
+            this.main = obj;
         }
 
         public void CreateFile() {
@@ -54,44 +55,38 @@ namespace Quiz {
             }
         }
 
-        public static QuizObject OpenFile() {
-            try {
-                OpenFileDialog openFile = new OpenFileDialog();
-                openFile.Filter = "Quiz files (*.quiz)|*.quiz";
+        public QuizObject OpenFile() {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Quiz files (*.quiz)|*.quiz";
 
-                if (openFile.ShowDialog() == DialogResult.OK) {
-                    Stream fileStream = openFile.OpenFile();
+            if (openFile.ShowDialog() == DialogResult.OK) {
+                Stream fileStream = openFile.OpenFile();
 
-                    using (StreamReader reader = new StreamReader(fileStream)) {
-                        main.name = reader.ReadLine().Remove(0, 5);
-                        main.subject = reader.ReadLine().Remove(0, 9);
-                        main.questions = new List<Question>();
+                using (StreamReader reader = new StreamReader(fileStream)) {
+                    main.name = reader.ReadLine().Remove(0, 5);
+                    main.subject = reader.ReadLine().Remove(0, 9);
+                    main.questions = new List<Question>();
 
-                        while (reader.Peek() > 0) {
-                            Question quest = new Question();
-                            quest.questiontext = reader.ReadLine().Remove(0, 2);
-                            quest.answers = new List<Answer>();
-                            for (int i = 0; i < 8; i++) {
-                                if (i % 2 > 0) {
-                                    Answer ans = new Answer();
-                                    ans.answertext = reader.ReadLine();
-                                    if (reader.ReadLine().Equals("True")) {
-                                        ans.isanswer = true;
-                                    }
-                                    quest.answers.Add(ans);
+                    while (reader.Peek() > 0) {
+                        Question quest = new Question();
+                        quest.questiontext = reader.ReadLine().Remove(0, 2);
+                        quest.answers = new List<Answer>();
+                        for (int i = 0; i < 8; i++) {
+                            if (i % 2 > 0) {
+                                Answer ans = new Answer();
+                                ans.answertext = reader.ReadLine();
+                                if (reader.ReadLine().Equals("True")) {
+                                    ans.isanswer = true;
                                 }
+                                quest.answers.Add(ans);
                             }
-                            main.questions.Add(quest);
-                            main.numofquestions++;
                         }
+                        main.questions.Add(quest);
+                        main.numofquestions++;
                     }
                 }
-                return main;
-            } catch (Exception e) {
-                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK);
             }
-            return null;
-            
+            return main;
         }
     }
 }

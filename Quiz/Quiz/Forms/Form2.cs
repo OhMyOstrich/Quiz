@@ -29,12 +29,10 @@ namespace Quiz
         int setCorrectAnswers;
         //This one is universal among the questions, and adds one if all correct answers in a question are selected.
         public static int realCorrectAnswers = 0;
-        public QuizObject main = Stuff.currentquiz;
+        public QuizObject main;
 
         public QuestionForm()
         {
-            CreateQuizWindow(main);
-
             //Initialize the variables
             answers = new List<Answer>();
             checkBoxes = new List<CheckBox>();
@@ -53,7 +51,7 @@ namespace Quiz
             form.Show();
         }
 
-
+        //Don't worry about this boiii
         private void questionBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -78,11 +76,12 @@ namespace Quiz
         private void QuestionForm_Load(object sender, EventArgs e)
         {
 
-            Stuff.currentquiz = QuizFile.OpenFile();
+            QuizFile qf = new QuizFile();
+            Stuff.currentquiz = qf.OpenFile();
 
             foreach(Question question in Stuff.currentquiz.questions)
             {
-                
+                q.Add(question);
             }
 
             //Loops through and ensures that the program knows how many correct answers there are.
@@ -114,9 +113,6 @@ namespace Quiz
         private void answerButton_Click(object sender, EventArgs e)
         {
 
-
-
-
             //Set which question to be loaded
             currentQuestionNumber++;
             question = q[currentQuestionNumber];
@@ -129,17 +125,11 @@ namespace Quiz
                 checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
             }
 
-
-            //The answers (sets the text for each of the answers.)
-            for (int i = 0; i < 4; i++)
-            {
-                checkBoxes[i].Text = answers[i].answertext;
-            }
             //Loop through each of the questions, and check to see if the correct answers were chosen.
             for (int i = 0; i < 4; i++)
             {
                 //Check what the user selected against what is actually correct
-                if(checkBoxes[i].Checked && answers[i].isanswer)
+                if(checkBoxes[i].Checked && q[currentQuestionNumber].answers[i].isanswer)
                 {
                     correctAnswers += 1;
                     if (correctAnswers == setCorrectAnswers)

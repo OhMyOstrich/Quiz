@@ -44,7 +44,7 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(121, 289);
+            this.SubmitButton.Location = new System.Drawing.Point(121, 281);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 1;
@@ -112,7 +112,7 @@
             // 
             // PrevButton
             // 
-            this.PrevButton.Location = new System.Drawing.Point(20, 289);
+            this.PrevButton.Location = new System.Drawing.Point(20, 281);
             this.PrevButton.Name = "PrevButton";
             this.PrevButton.Size = new System.Drawing.Size(75, 23);
             this.PrevButton.TabIndex = 3;
@@ -121,7 +121,7 @@
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(222, 289);
+            this.NextButton.Location = new System.Drawing.Point(222, 281);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 23);
             this.NextButton.TabIndex = 4;

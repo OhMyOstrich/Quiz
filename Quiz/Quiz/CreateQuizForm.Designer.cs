@@ -48,12 +48,12 @@
             // 
             this.QuizNameTB.Location = new System.Drawing.Point(103, 23);
             this.QuizNameTB.Name = "QuizNameTB";
-            this.QuizNameTB.Size = new System.Drawing.Size(141, 20);
+            this.QuizNameTB.Size = new System.Drawing.Size(237, 20);
             this.QuizNameTB.TabIndex = 0;
             // 
             // FinishButton
             // 
-            this.FinishButton.Location = new System.Drawing.Point(271, 430);
+            this.FinishButton.Location = new System.Drawing.Point(433, 646);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(75, 23);
             this.FinishButton.TabIndex = 14;
@@ -65,7 +65,7 @@
             // 
             this.QuizSubjectTB.Location = new System.Drawing.Point(103, 51);
             this.QuizSubjectTB.Name = "QuizSubjectTB";
-            this.QuizSubjectTB.Size = new System.Drawing.Size(141, 20);
+            this.QuizSubjectTB.Size = new System.Drawing.Size(237, 20);
             this.QuizSubjectTB.TabIndex = 1;
             // 
             // label1
@@ -90,7 +90,7 @@
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(271, 287);
+            this.AddButton.Location = new System.Drawing.Point(20, 646);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 11;
@@ -100,7 +100,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(271, 313);
+            this.DeleteButton.Location = new System.Drawing.Point(127, 646);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
             this.DeleteButton.TabIndex = 12;
@@ -110,7 +110,7 @@
             // 
             // CountButton
             // 
-            this.CountButton.Location = new System.Drawing.Point(271, 339);
+            this.CountButton.Location = new System.Drawing.Point(234, 646);
             this.CountButton.Name = "CountButton";
             this.CountButton.Size = new System.Drawing.Size(75, 23);
             this.CountButton.TabIndex = 13;
@@ -121,49 +121,49 @@
             // QuestionsListBox
             // 
             this.QuestionsListBox.FormattingEnabled = true;
-            this.QuestionsListBox.Location = new System.Drawing.Point(370, 23);
+            this.QuestionsListBox.Location = new System.Drawing.Point(380, 10);
             this.QuestionsListBox.Name = "QuestionsListBox";
-            this.QuestionsListBox.Size = new System.Drawing.Size(227, 433);
+            this.QuestionsListBox.Size = new System.Drawing.Size(416, 602);
             this.QuestionsListBox.TabIndex = 15;
             // 
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(29, 122);
+            this.richTextBox1.Location = new System.Drawing.Point(29, 102);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(215, 83);
+            this.richTextBox1.Size = new System.Drawing.Size(311, 102);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
             // Answer1Box
             // 
-            this.Answer1Box.Location = new System.Drawing.Point(93, 220);
+            this.Answer1Box.Location = new System.Drawing.Point(93, 214);
             this.Answer1Box.Name = "Answer1Box";
-            this.Answer1Box.Size = new System.Drawing.Size(151, 54);
+            this.Answer1Box.Size = new System.Drawing.Size(247, 90);
             this.Answer1Box.TabIndex = 4;
             this.Answer1Box.Text = "";
             // 
             // Answer2Box
             // 
-            this.Answer2Box.Location = new System.Drawing.Point(93, 282);
+            this.Answer2Box.Location = new System.Drawing.Point(93, 320);
             this.Answer2Box.Name = "Answer2Box";
-            this.Answer2Box.Size = new System.Drawing.Size(151, 54);
+            this.Answer2Box.Size = new System.Drawing.Size(247, 90);
             this.Answer2Box.TabIndex = 6;
             this.Answer2Box.Text = "";
             // 
             // Answer3Box
             // 
-            this.Answer3Box.Location = new System.Drawing.Point(93, 342);
+            this.Answer3Box.Location = new System.Drawing.Point(93, 426);
             this.Answer3Box.Name = "Answer3Box";
-            this.Answer3Box.Size = new System.Drawing.Size(151, 54);
+            this.Answer3Box.Size = new System.Drawing.Size(247, 84);
             this.Answer3Box.TabIndex = 8;
             this.Answer3Box.Text = "";
             // 
             // Answer4Box
             // 
-            this.Answer4Box.Location = new System.Drawing.Point(93, 402);
+            this.Answer4Box.Location = new System.Drawing.Point(93, 526);
             this.Answer4Box.Name = "Answer4Box";
-            this.Answer4Box.Size = new System.Drawing.Size(151, 54);
+            this.Answer4Box.Size = new System.Drawing.Size(247, 90);
             this.Answer4Box.TabIndex = 10;
             this.Answer4Box.Text = "";
             // 
@@ -171,7 +171,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 103);
+            this.label7.Location = new System.Drawing.Point(25, 83);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 15);
             this.label7.TabIndex = 25;
@@ -180,7 +180,7 @@
             // Answer1Check
             // 
             this.Answer1Check.AutoSize = true;
-            this.Answer1Check.Location = new System.Drawing.Point(16, 222);
+            this.Answer1Check.Location = new System.Drawing.Point(20, 218);
             this.Answer1Check.Name = "Answer1Check";
             this.Answer1Check.Size = new System.Drawing.Size(73, 17);
             this.Answer1Check.TabIndex = 3;
@@ -190,7 +190,7 @@
             // Answer2Check
             // 
             this.Answer2Check.AutoSize = true;
-            this.Answer2Check.Location = new System.Drawing.Point(16, 284);
+            this.Answer2Check.Location = new System.Drawing.Point(20, 323);
             this.Answer2Check.Name = "Answer2Check";
             this.Answer2Check.Size = new System.Drawing.Size(73, 17);
             this.Answer2Check.TabIndex = 5;
@@ -200,7 +200,7 @@
             // Answer3Check
             // 
             this.Answer3Check.AutoSize = true;
-            this.Answer3Check.Location = new System.Drawing.Point(16, 346);
+            this.Answer3Check.Location = new System.Drawing.Point(20, 428);
             this.Answer3Check.Name = "Answer3Check";
             this.Answer3Check.Size = new System.Drawing.Size(73, 17);
             this.Answer3Check.TabIndex = 7;
@@ -210,7 +210,7 @@
             // Answer4Check
             // 
             this.Answer4Check.AutoSize = true;
-            this.Answer4Check.Location = new System.Drawing.Point(16, 408);
+            this.Answer4Check.Location = new System.Drawing.Point(20, 533);
             this.Answer4Check.Name = "Answer4Check";
             this.Answer4Check.Size = new System.Drawing.Size(73, 17);
             this.Answer4Check.TabIndex = 9;
@@ -221,7 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 477);
+            this.ClientSize = new System.Drawing.Size(808, 687);
             this.Controls.Add(this.Answer4Check);
             this.Controls.Add(this.Answer3Check);
             this.Controls.Add(this.Answer2Check);

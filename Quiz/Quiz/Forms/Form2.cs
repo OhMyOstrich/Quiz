@@ -94,7 +94,10 @@ namespace Quiz
             }
 
             //The question
-            questionLabel.Text = q[0].questiontext;
+            int temp = q[0].questiontext.IndexOf(" Cc");
+            string temp1 = q[0].questiontext.Remove(temp);
+            questionLabel.Text = temp1;
+            //questionLabel.Text = q[0].questiontext; ;
 
             //Put each of the question checkboxes into an array to loop through when the answer button is clicked.
             checkBoxes[0] = questionBox1;

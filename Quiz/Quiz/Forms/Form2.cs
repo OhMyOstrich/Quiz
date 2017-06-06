@@ -115,6 +115,7 @@ namespace Quiz
 
         private void answerButton_Click(object sender, EventArgs e)
         {
+            
 
             //Set which question to be loaded
             currentQuestionNumber++;
@@ -149,6 +150,11 @@ namespace Quiz
             } else {
                 q[currentQuestionNumber].wasAnsweredCorrectly = false;
             }
+
+            checkBoxes[0].Checked = false;
+            checkBoxes[1].Checked = false;
+            checkBoxes[2].Checked = false;
+            checkBoxes[3].Checked = false;
         }
     }
 }

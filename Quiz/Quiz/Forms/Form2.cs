@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Quiz
 {
-    
+
     public partial class QuestionForm : Form
     {
 
@@ -75,100 +75,108 @@ namespace Quiz
         //Set the Labels and QuestionBoxes set to the question put into the load function.
         private void QuestionForm_Load(object sender, EventArgs e)
         {
-
-            QuizFile qf = new QuizFile();
-            Stuff.currentquiz = qf.OpenFile();
-
-            foreach(Question question in Stuff.currentquiz.questions)
+            try
             {
-                q.Add(question);
-            }
+                QuizFile qf = new QuizFile();
+                Stuff.currentquiz = qf.OpenFile();
 
-            //Loops through and ensures that the program knows how many correct answers there are.
-            foreach (Answer answer in q[currentQuestionNumber].answers)
-            {
-                if (answer.isanswer)
+                foreach (Question question in Stuff.currentquiz.questions)
                 {
-                    setCorrectAnswers += 1;
+                    q.Add(question);
+                }
+
+                //Loops through and ensures that the program knows how many correct answers there are.
+                foreach (Answer answer in q[currentQuestionNumber].answers)
+                {
+                    if (answer.isanswer)
+                    {
+                        setCorrectAnswers += 1;
+                    }
+                }
+
+                //The question
+                questionLabel.Text = q[0].questiontext; ;
+
+                //Put each of the question checkboxes into an array to loop through when the answer button is clicked.
+                checkBoxes[0] = questionBox1;
+                checkBoxes[1] = questionBox2;
+                checkBoxes[2] = questionBox3;
+                checkBoxes[3] = questionBox4;
+
+                //The answers (sets the text for each of the answers.
+                for (int i = 0; i < 4; i++)
+                {
+                    checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
                 }
             }
-
-            //The question
-            int temp = q[0].questiontext.IndexOf(" Cc");
-            string temp1 = q[0].questiontext.Remove(temp);
-            questionLabel.Text = temp1;
-            //questionLabel.Text = q[0].questiontext; ;
-
-            //Put each of the question checkboxes into an array to loop through when the answer button is clicked.
-            checkBoxes[0] = questionBox1;
-            checkBoxes[1] = questionBox2;
-            checkBoxes[2] = questionBox3;
-            checkBoxes[3] = questionBox4;
-
-            //The answers (sets the text for each of the answers.
-            for (int i = 0; i < 4; i++)
+            catch (Exception)
             {
-                checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
+                this.Hide();
+                MessageBox.Show("Please select a valid quiz.");
+                Form1 form = new Form1();
+                form.Show();
             }
-            
+
         }
 
         private void answerButton_Click(object sender, EventArgs e)
         {
-
-            //-----Make sure the answer selected is correct.-----
-            //Loop through each of the questions, and check to see if the correct answers were chosen.
-            for (int i = 0; i < 4; i++)
-            {
-                //Check what the user selected against what is actually correct
-                if (checkBoxes[i].Checked && q[currentQuestionNumber].answers[i].isanswer)
+                //-----Make sure the answer selected is correct.-----
+                //Loop through each of the questions, and check to see if the correct answers were chosen.
+                for (int i = 0; i < 4; i++)
                 {
-                    correctAnswers++;
+                    //Check what the user selected against what is actually correct
+                    if (checkBoxes[i].Checked && q[currentQuestionNumber].answers[i].isanswer)
+                    {
+                        correctAnswers++;
+                    }
                 }
-            }
 
-            if (correctAnswers == setCorrectAnswers)
-            {
-                realCorrectAnswers++;
-                label1.Text = realCorrectAnswers.ToString();
-            }
-
-            //Set the question to have been correctly answered, if the user answered correctly.
-            if (correctAnswers == setCorrectAnswers)
-            {
-                q[currentQuestionNumber].wasAnsweredCorrectly = true;
-            }
-            else
-            {
-                q[currentQuestionNumber].wasAnsweredCorrectly = false;
-            }
-
-            
-            //---------------------------------------------------
-
-            setCorrectAnswers = 0;
-            correctAnswers = 0;
-
-            //Set which question to be loaded
-            currentQuestionNumber++;
-            question = q[currentQuestionNumber];
-
-            //The question
-            questionLabel.Text = question.questiontext;
-
-            for (int i = 0; i < 4; i++)
-            {
-                checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
-            }
-
-            //Loops through and ensures that the program knows how many correct answers there are.
-            foreach (Answer answer in q[currentQuestionNumber].answers)
-            {
-                if (answer.isanswer)
+                if (correctAnswers == setCorrectAnswers)
                 {
-                    setCorrectAnswers += 1;
+                    realCorrectAnswers++;
+                    label1.Text = realCorrectAnswers.ToString();
                 }
+
+                //Set the question to have been correctly answered, if the user answered correctly.
+                if (correctAnswers == setCorrectAnswers)
+                {
+                    q[currentQuestionNumber].wasAnsweredCorrectly = true;
+                }
+                else
+                {
+                    q[currentQuestionNumber].wasAnsweredCorrectly = false;
+                }
+                //---------------------------------------------------
+
+                setCorrectAnswers = 0;
+                correctAnswers = 0;
+
+                //Set which question to be loaded
+                currentQuestionNumber++;
+                question = q[currentQuestionNumber];
+
+                //The question
+                questionLabel.Text = question.questiontext;
+
+                for (int i = 0; i < 4; i++)
+                {
+                    checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
+                }
+
+                //Loops through and ensures that the program knows how many correct answers there are.
+                foreach (Answer answer in q[currentQuestionNumber].answers)
+                {
+                    if (answer.isanswer)
+                    {
+                        setCorrectAnswers += 1;
+                    }
+                }
+
+                checkBoxes[0].Checked = false;
+                checkBoxes[1].Checked = false;
+                checkBoxes[2].Checked = false;
+                checkBoxes[3].Checked = false;
             }
-        }
     }
-}
+} 

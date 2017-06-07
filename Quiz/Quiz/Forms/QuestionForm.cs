@@ -120,6 +120,13 @@ namespace Quiz
 
                 for (int i = 0; i < 4; i++)
                 {
+
+                    //foreach (var x in q[b].answers) {
+                    //    if (x.isanswer) {
+                    //        if (q[b].checkBoxSelected == )
+                    //    }
+                    //}
+
                     //Check what the user selected against what is actually correct
                     if (q[b].checkBoxSelected == i && q[b].answers[i].isanswer)
                     {

@@ -37,7 +37,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Azure;
+            this.button1.BackColor = System.Drawing.Color.PowderBlue;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -54,6 +54,7 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.PowderBlue;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -65,7 +66,7 @@
             this.button2.Size = new System.Drawing.Size(323, 77);
             this.button2.TabIndex = 1;
             this.button2.Text = "Take Quiz";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1

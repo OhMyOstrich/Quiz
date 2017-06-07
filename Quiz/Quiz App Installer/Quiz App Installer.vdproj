@@ -28,13 +28,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_797ABB50139CC9E3DEB3A8CEB62A248F"
+        "OwnerKey" = "8:_6941C8DD309E4CED9DF58C03A9A251BD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6941C8DD309E4CED9DF58C03A9A251BD"
+        "OwnerKey" = "8:_797ABB50139CC9E3DEB3A8CEB62A248F"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -55,6 +55,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -71,6 +79,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -333,7 +349,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DF7A7FB4765343DE9DA403C3896F9169"
             {
-            "Name" = "8:Shortcut to Quiz"
+            "Name" = "8:Employee Quiz Application"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

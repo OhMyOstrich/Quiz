@@ -34,12 +34,12 @@
             this.questionBox2 = new System.Windows.Forms.CheckBox();
             this.questionBox3 = new System.Windows.Forms.CheckBox();
             this.questionBox4 = new System.Windows.Forms.CheckBox();
-            this.questionLabel = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.answerButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.PreviousBtn = new System.Windows.Forms.Button();
             this.NextBtn = new System.Windows.Forms.Button();
+            this.questionBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // questionBox1
@@ -85,16 +85,6 @@
             this.questionBox4.TabIndex = 0;
             this.questionBox4.Text = "Answer 4";
             this.questionBox4.UseVisualStyleBackColor = true;
-            // 
-            // questionLabel
-            // 
-            this.questionLabel.AutoSize = true;
-            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionLabel.Location = new System.Drawing.Point(9, 9);
-            this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(73, 20);
-            this.questionLabel.TabIndex = 1;
-            this.questionLabel.Text = "Question";
             // 
             // imageList1
             // 
@@ -144,16 +134,26 @@
             this.NextBtn.UseVisualStyleBackColor = true;
             this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
+            // questionBox
+            // 
+            this.questionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionBox.Location = new System.Drawing.Point(12, 9);
+            this.questionBox.Name = "questionBox";
+            this.questionBox.ReadOnly = true;
+            this.questionBox.Size = new System.Drawing.Size(691, 53);
+            this.questionBox.TabIndex = 6;
+            this.questionBox.Text = "";
+            // 
             // QuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 229);
+            this.Controls.Add(this.questionBox);
             this.Controls.Add(this.NextBtn);
             this.Controls.Add(this.PreviousBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.answerButton);
-            this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.questionBox4);
             this.Controls.Add(this.questionBox3);
             this.Controls.Add(this.questionBox2);
@@ -175,11 +175,11 @@
         private System.Windows.Forms.CheckBox questionBox2;
         private System.Windows.Forms.CheckBox questionBox3;
         private System.Windows.Forms.CheckBox questionBox4;
-        private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button answerButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button PreviousBtn;
         private System.Windows.Forms.Button NextBtn;
+        private System.Windows.Forms.RichTextBox questionBox;
     }
 }

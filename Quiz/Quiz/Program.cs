@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Quiz
 {
@@ -13,11 +15,14 @@ namespace Quiz
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
-        {
+        static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            //foreach (var x in hash) {
+
+            //}
 
             //RegistryKey e = Registry.LocalMachine.CreateSubKey("Software");
             //RegistryKey key = Registry.LocalMachine.CreateSubKey("\\Software\\Classes");

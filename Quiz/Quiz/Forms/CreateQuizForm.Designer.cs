@@ -59,7 +59,7 @@
             this.FinishButton.TabIndex = 15;
             this.FinishButton.Text = "Finish";
             this.FinishButton.UseVisualStyleBackColor = true;
-            this.FinishButton.Click += new System.EventHandler(this.CreateQuizButton_Click);
+            this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
             // 
             // QuizSubjectTB
             // 

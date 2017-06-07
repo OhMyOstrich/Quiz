@@ -7,22 +7,7 @@ using System.Threading.Tasks;
 
 namespace Quiz {
     static class Stuff {
-        public static QuizDatabase db = new QuizDatabase();
         public static QuizObject currentquiz;
-        public static StreamReader sr;
-        public static void AddQuiz(string n, List<Question> q) {
-            Stuff.db.Quizzes.Add(new QuizObject { name = n, questions = q });
-            Stuff.db.SaveChanges();
-            Stuff.db = null;
-            Stuff.db = new QuizDatabase();
-        }
-
-        public static void AddQuiz(string n) {
-            Stuff.db.Quizzes.Add(new QuizObject { name = n });
-            Stuff.db.SaveChanges();
-            Stuff.db = null;
-            Stuff.db = new QuizDatabase();
-        }
-
+        public static string pass;
     }
 }

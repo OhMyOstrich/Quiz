@@ -16,8 +16,7 @@ namespace Quiz {
     public class QuizFile {
         public QuizObject main;
 
-        public QuizFile()
-        {
+        public QuizFile() {
             this.main = new QuizObject();
         }
 
@@ -39,7 +38,7 @@ namespace Quiz {
                     writer.WriteLine("Subject: " + main.subject);
 
                     for(int i = 0; i < main.numofquestions; i++) {
-                        writer.WriteLine((i+1).ToString() + ": " + main.questions[i]);
+                        writer.WriteLine((i + 1).ToString() + ": " + main.questions[i]);
                         foreach(Answer a in main.questions[i].answers)
                         {
                             writer.WriteLine(a);

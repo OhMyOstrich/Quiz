@@ -71,8 +71,8 @@ namespace Quiz {
 
                     while (reader.Peek() > 0) {
                         Question quest = new Question();
-                        colon = ':';
-                        colonIndex = quest.questiontext.IndexOf(colon);
+                       // colon = ':';
+                        //colonIndex = quest.questiontext.IndexOf(colon);
                         quest.questiontext = reader.ReadLine().Remove(0, colonIndex);
                         quest.answers = new List<Answer>();
                         for (int i = 0; i < 8; i++) {

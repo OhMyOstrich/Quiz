@@ -43,10 +43,10 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(0, 286);
+            this.button1.Location = new System.Drawing.Point(0, 278);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(385, 35);
+            this.button1.Size = new System.Drawing.Size(323, 43);
             this.button1.TabIndex = 0;
             this.button1.Text = "Create Quiz";
             this.button1.UseVisualStyleBackColor = false;
@@ -62,7 +62,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(385, 83);
+            this.button2.Size = new System.Drawing.Size(323, 77);
             this.button2.TabIndex = 1;
             this.button2.Text = "Take Quiz";
             this.button2.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(127)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 83);
+            this.pictureBox1.Location = new System.Drawing.Point(-33, 74);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(388, 204);
             this.pictureBox1.TabIndex = 2;
@@ -84,7 +84,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(385, 321);
+            this.ClientSize = new System.Drawing.Size(323, 321);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

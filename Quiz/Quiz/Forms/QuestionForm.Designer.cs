@@ -94,8 +94,9 @@
             // 
             // answerButton
             // 
+            this.answerButton.Enabled = false;
             this.answerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerButton.Location = new System.Drawing.Point(208, 180);
+            this.answerButton.Location = new System.Drawing.Point(397, 180);
             this.answerButton.Name = "answerButton";
             this.answerButton.Size = new System.Drawing.Size(277, 37);
             this.answerButton.TabIndex = 2;
@@ -126,7 +127,7 @@
             // NextBtn
             // 
             this.NextBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextBtn.Location = new System.Drawing.Point(551, 180);
+            this.NextBtn.Location = new System.Drawing.Point(207, 180);
             this.NextBtn.Name = "NextBtn";
             this.NextBtn.Size = new System.Drawing.Size(96, 37);
             this.NextBtn.TabIndex = 5;

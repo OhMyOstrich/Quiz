@@ -62,7 +62,7 @@
     <Compile Include="Forms\CreateQuizForm.Designer.cs">
       <DependentUpon>CreateQuizForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs" />
+    <Compile Include="Classes.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +89,6 @@
     </Compile>
     <Compile Include="QuizFile.cs" />
     <Compile Include="Stuff.cs" />
-    <Compile Include="Migrations\201705122012015_initial.cs" />
-    <Compile Include="Migrations\201705122012015_initial.Designer.cs">
-      <DependentUpon>201705122012015_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CreateQuizForm.resx">
@@ -110,9 +105,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ScoreForm.resx">
       <DependentUpon>ScoreForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705122012015_initial.resx">
-      <DependentUpon>201705122012015_initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

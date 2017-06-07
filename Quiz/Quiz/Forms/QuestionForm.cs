@@ -90,10 +90,10 @@ namespace Quiz
             }
             catch (Exception)
             {
-                this.Hide();
-                MessageBox.Show("Please select a valid quiz.");
-                Form1 form = new Form1();
-                form.Show();
+                MessageBox.Show("File invalid or no file selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                //Form1 form = new Form1();
+                //form.Show();
             }
 
         }

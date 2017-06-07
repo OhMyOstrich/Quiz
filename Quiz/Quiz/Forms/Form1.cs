@@ -59,7 +59,10 @@ namespace Quiz
             //QuizObject obj = open.OpenFile();
             //TakeQuiz take = new TakeQuiz(obj);
 
+            
             QuestionForm form = new QuestionForm();
+            form.FormClosed += (s, args) => this.Show();
+            this.Hide();
             form.Show();
             
         }

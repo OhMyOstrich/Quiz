@@ -47,31 +47,11 @@ namespace Quiz
 
         private void CreateQuizWindow(QuizObject quiz) {
             this.Hide();
-            Quiz form = new Quiz();
+            CreateQuizForm form = new CreateQuizForm();
             form.FormClosed += (s, args) => this.Close();
             form.Show();
         }
-
-        //Don't worry about this boiii
-        private void questionBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void questionBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void questionBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void questionBox4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         //Set the Labels and QuestionBoxes set to the question put into the load function.
         private void QuestionForm_Load(object sender, EventArgs e) {

@@ -246,6 +246,7 @@ namespace Quiz
         {
             try
             {
+                
                 for (int i = 0; i < 4; i++)
                 {
                     if (checkBoxes[i].Checked)
@@ -258,6 +259,11 @@ namespace Quiz
                 //Set which question to be loaded
                 currentQuestionNumber++;
                 question = q[currentQuestionNumber];
+
+                if (currentQuestionNumber+1 == main.numofquestions)
+                {
+                    answerButton.Enabled = true;
+                }
 
                 this.Text = "Question: " + (currentQuestionNumber + 1); //Display which question the user is on
 

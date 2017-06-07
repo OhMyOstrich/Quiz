@@ -75,6 +75,12 @@
     <Compile Include="Forms\QuestionForm.Designer.cs">
       <DependentUpon>QuestionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScoreForm.Designer.cs">
+      <DependentUpon>ScoreForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuizFile.cs" />
     <Compile Include="Stuff.cs" />
     <Compile Include="Migrations\201705122012015_initial.cs" />
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\QuestionForm.resx">
       <DependentUpon>QuestionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScoreForm.resx">
+      <DependentUpon>ScoreForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705122012015_initial.resx">
       <DependentUpon>201705122012015_initial.cs</DependentUpon>

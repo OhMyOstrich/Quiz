@@ -46,12 +46,12 @@ namespace Quiz {
         public List<Answer> answers { get; set; }
 
         public override string ToString() {
+            return questiontext;
+        }
+        public string ToString(bool needsAns)
+        {
             string ans = "";
-            foreach(Answer a in answers)
-            {
-                ans = ans + a + " " + ": " + a.isanswer;
-            }
-            return questiontext + " " + ans;
+            return ans;
         }
     }
 

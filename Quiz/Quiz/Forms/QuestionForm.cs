@@ -47,8 +47,8 @@ namespace Quiz
 
         private void CreateQuizWindow(QuizObject quiz)
         {
-            Quiz form = new Quiz();
-            form.Show();
+            //Quiz form = new Quiz();
+            //form.Show();
         }
 
         //Don't worry about this boiii
@@ -178,5 +178,10 @@ namespace Quiz
                 checkBoxes[2].Checked = false;
                 checkBoxes[3].Checked = false;
             }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 } 

@@ -38,6 +38,8 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.answerButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.PreviousBtn = new System.Windows.Forms.Button();
+            this.NextBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // questionBox1
@@ -107,9 +109,9 @@
             // answerButton
             // 
             this.answerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerButton.Location = new System.Drawing.Point(12, 180);
+            this.answerButton.Location = new System.Drawing.Point(208, 180);
             this.answerButton.Name = "answerButton";
-            this.answerButton.Size = new System.Drawing.Size(698, 37);
+            this.answerButton.Size = new System.Drawing.Size(277, 37);
             this.answerButton.TabIndex = 2;
             this.answerButton.Text = "Submit";
             this.answerButton.UseVisualStyleBackColor = true;
@@ -124,11 +126,34 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
             // 
+            // PreviousBtn
+            // 
+            this.PreviousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousBtn.Location = new System.Drawing.Point(63, 180);
+            this.PreviousBtn.Name = "PreviousBtn";
+            this.PreviousBtn.Size = new System.Drawing.Size(96, 37);
+            this.PreviousBtn.TabIndex = 4;
+            this.PreviousBtn.Text = "Prev";
+            this.PreviousBtn.UseVisualStyleBackColor = true;
+            // 
+            // NextBtn
+            // 
+            this.NextBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextBtn.Location = new System.Drawing.Point(551, 180);
+            this.NextBtn.Name = "NextBtn";
+            this.NextBtn.Size = new System.Drawing.Size(96, 37);
+            this.NextBtn.TabIndex = 5;
+            this.NextBtn.Text = "Next";
+            this.NextBtn.UseVisualStyleBackColor = true;
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
+            // 
             // QuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 229);
+            this.Controls.Add(this.NextBtn);
+            this.Controls.Add(this.PreviousBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.answerButton);
             this.Controls.Add(this.questionLabel);
@@ -157,5 +182,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button answerButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button PreviousBtn;
+        private System.Windows.Forms.Button NextBtn;
     }
 }

@@ -29,9 +29,9 @@ namespace Quiz
         private void TakeQuiz_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Quiz form = new Quiz();
-            form.FormClosed += (s, args) => this.Close();
-            form.Show();
+            //Quiz form = new Quiz();
+            //form.FormClosed += (s, args) => this.Close();
+            //form.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,9 +49,13 @@ namespace Quiz
 
         private void button2_Click(object sender, EventArgs e)
         {
-            QuizFile open = new QuizFile();
-            QuizObject obj = open.OpenFile();
-            TakeQuiz take = new TakeQuiz(obj);
+            //QuizFile open = new QuizFile();
+            //QuizObject obj = open.OpenFile();
+            //TakeQuiz take = new TakeQuiz(obj);
+
+            QuestionForm form = new QuestionForm();
+            form.Show();
+            
         }
     }
 }

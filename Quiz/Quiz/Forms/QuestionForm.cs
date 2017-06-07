@@ -139,7 +139,7 @@ namespace Quiz
             //---------------------------------------------------
 
             setCorrectAnswers = 0;
-                correctAnswers = 0;
+            correctAnswers = 0;
 
             //Set which question to be loaded
 

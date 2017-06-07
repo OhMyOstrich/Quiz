@@ -22,7 +22,7 @@ namespace Quiz.Forms
 
         private void ScoreForm_Load(object sender, EventArgs e)
         {
-            ScoreLabel.Text = quiz.
+            //ScoreLabel.Text = quiz.
 
         }
 

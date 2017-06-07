@@ -141,7 +141,6 @@
             this.NextBtn.TabIndex = 5;
             this.NextBtn.Text = "Next";
             this.NextBtn.UseVisualStyleBackColor = true;
-            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
             // QuestionForm
             // 

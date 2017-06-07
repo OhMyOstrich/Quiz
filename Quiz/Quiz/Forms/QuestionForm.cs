@@ -59,6 +59,8 @@ namespace Quiz
                 QuizFile qf = new QuizFile();
                 Stuff.currentquiz = qf.OpenFile();
 
+                this.Text = "Question: 1"; //Display which question the user is on
+
                 foreach (Question question in Stuff.currentquiz.questions)
                 {
                     q.Add(question);
@@ -74,7 +76,7 @@ namespace Quiz
                 }
 
                 //The question
-                questionLabel.Text = q[0].questiontext; ;
+                questionBox.Text = q[0].questiontext; ;
 
                 //Put each of the question checkboxes into an array to loop through when the answer button is clicked.
                 checkBoxes[0] = questionBox1;
@@ -139,8 +141,10 @@ namespace Quiz
                 currentQuestionNumber++;
                 question = q[currentQuestionNumber];
 
-                //The question
-                questionLabel.Text = question.questiontext;
+                this.Text = "Question: " + (currentQuestionNumber + 1); //Display which question the user is on
+
+            //The question
+                questionBox.Text = question.questiontext;
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -166,15 +170,14 @@ namespace Quiz
         {
             try {
 
-                //setCorrectAnswers = 0;
-                //correctAnswers = 0;
-
                 //Set which question to be loaded
                 currentQuestionNumber--;
                 question = q[currentQuestionNumber];
 
+                this.Text = "Question: " + (currentQuestionNumber + 1); //Display which question the user is on
+
                 //The question
-                questionLabel.Text = question.questiontext;
+                questionBox.Text = question.questiontext;
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -194,7 +197,7 @@ namespace Quiz
                 question = q[currentQuestionNumber];
 
                 //The question
-                questionLabel.Text = question.questiontext;
+                questionBox.Text = question.questiontext;
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -208,15 +211,14 @@ namespace Quiz
             try
             {
 
-                //setCorrectAnswers = 0;
-                //correctAnswers = 0;
-
                 //Set which question to be loaded
                 currentQuestionNumber++;
                 question = q[currentQuestionNumber];
 
+                this.Text = "Question: " + (currentQuestionNumber + 1); //Display which question the user is on
+
                 //The question
-                questionLabel.Text = question.questiontext;
+                questionBox.Text = question.questiontext;
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -236,7 +238,7 @@ namespace Quiz
                 question = q[currentQuestionNumber];
 
                 //The question
-                questionLabel.Text = question.questiontext;
+                questionBox.Text = question.questiontext;
 
                 for (int i = 0; i < 4; i++)
                 {

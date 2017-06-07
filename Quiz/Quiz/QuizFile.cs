@@ -24,6 +24,9 @@ namespace Quiz {
             this.main = obj;
         }
 
+        private int colonIndex = 2;
+        char colon;
+
         public void CreateFile() {
             SaveFileDialog saver = new SaveFileDialog();
             saver.Filter = "Quiz files (*.quiz)|*.quiz";
@@ -68,7 +71,9 @@ namespace Quiz {
 
                     while (reader.Peek() > 0) {
                         Question quest = new Question();
-                        quest.questiontext = reader.ReadLine().Remove(0, 2);
+                       // colon = ':';
+                        //colonIndex = quest.questiontext.IndexOf(colon);
+                        quest.questiontext = reader.ReadLine().Remove(0, colonIndex);
                         quest.answers = new List<Answer>();
                         for (int i = 0; i < 8; i++) {
                             if (i % 2 > 0) {

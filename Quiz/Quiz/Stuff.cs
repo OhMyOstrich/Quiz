@@ -10,7 +10,6 @@ namespace Quiz {
 
         public static QuizDatabase db = new QuizDatabase();
         public static QuizObject currentquiz;
-        public static StreamReader sr;
 
         public static void AddQuiz(string n, List<Question> q) {
             Stuff.db.Quizzes.Add(new QuizObject { name = n, questions = q });

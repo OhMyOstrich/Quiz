@@ -14,9 +14,16 @@ namespace Quiz {
             InitializeComponent();
         }
 
-        private void CreateQuizButton_Click(object sender, EventArgs e) {
+        private void FinishButton_Click(object sender, EventArgs e) {
             //Stuff.AddQuiz(QuizNameTB.Text);
-            QuizObject temp = new QuizObject {name = QuizNameTB.Text, subject = QuizSubjectTB.Text, numofquestions = QuestionsListBox.Items.Count, questions = new List<Question>()};
+
+            if (QuizSubjectTB.Text.Trim() == "" || QuizNameTB.Text.Trim() == "") {
+                MessageBox.Show("Quiz Subject and Quiz Name cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            QuizObject temp = new QuizObject {name = QuizNameTB.Text, subject = QuizSubjectTB.Text,
+                numofquestions = QuestionsListBox.Items.Count, questions = new List<Question>()};
 
             foreach(Question x in QuestionsListBox.Items) {
                 temp.questions.Add(x);
@@ -29,9 +36,11 @@ namespace Quiz {
 
         private void button3_Click(object sender, EventArgs e) {
             if (QuestionsListBox.Items.Count == 0 || QuestionsListBox.Items.Count > 1) {
-                MessageBox.Show("There are " + QuestionsListBox.Items.Count + " questions in this quiz", "Question Counted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("There are " + QuestionsListBox.Items.Count + " questions in this quiz", "Question Counted",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             } else {
-                MessageBox.Show("There is " + QuestionsListBox.Items.Count + " question in this quiz", "Question Counted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("There is " + QuestionsListBox.Items.Count + " question in this quiz", "Question Counted",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }

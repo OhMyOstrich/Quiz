@@ -52,7 +52,6 @@
             this.questionBox1.TabIndex = 0;
             this.questionBox1.Text = "Answer 1";
             this.questionBox1.UseVisualStyleBackColor = true;
-            this.questionBox1.CheckedChanged += new System.EventHandler(this.questionBox1_CheckedChanged);
             // 
             // questionBox2
             // 
@@ -64,7 +63,6 @@
             this.questionBox2.TabIndex = 0;
             this.questionBox2.Text = "Answer 2";
             this.questionBox2.UseVisualStyleBackColor = true;
-            this.questionBox2.CheckedChanged += new System.EventHandler(this.questionBox2_CheckedChanged);
             // 
             // questionBox3
             // 
@@ -76,7 +74,6 @@
             this.questionBox3.TabIndex = 0;
             this.questionBox3.Text = "Answer 3";
             this.questionBox3.UseVisualStyleBackColor = true;
-            this.questionBox3.CheckedChanged += new System.EventHandler(this.questionBox3_CheckedChanged);
             // 
             // questionBox4
             // 
@@ -88,7 +85,6 @@
             this.questionBox4.TabIndex = 0;
             this.questionBox4.Text = "Answer 4";
             this.questionBox4.UseVisualStyleBackColor = true;
-            this.questionBox4.CheckedChanged += new System.EventHandler(this.questionBox4_CheckedChanged);
             // 
             // questionLabel
             // 
@@ -145,7 +141,6 @@
             this.NextBtn.TabIndex = 5;
             this.NextBtn.Text = "Next";
             this.NextBtn.UseVisualStyleBackColor = true;
-            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
             // QuestionForm
             // 

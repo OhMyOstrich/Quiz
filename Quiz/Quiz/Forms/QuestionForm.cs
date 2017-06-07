@@ -45,40 +45,17 @@ namespace Quiz
             InitializeComponent();
         }
 
-        private void CreateQuizWindow(QuizObject quiz)
-        {
-            //this.Hide();
-            //Quiz form = new Quiz();
-            //form.FormClosed += (s, args) => this.Close();
-            //form.Show();
+        private void CreateQuizWindow(QuizObject quiz) {
+            this.Hide();
+            CreateQuizForm form = new CreateQuizForm();
+            form.FormClosed += (s, args) => this.Close();
+            form.Show();
         }
-
-        //Don't worry about this boiii
-        private void questionBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void questionBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void questionBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void questionBox4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         //Set the Labels and QuestionBoxes set to the question put into the load function.
-        private void QuestionForm_Load(object sender, EventArgs e)
-        {
-            try
-            {
+        private void QuestionForm_Load(object sender, EventArgs e) {
+            try {
                 QuizFile qf = new QuizFile();
                 Stuff.currentquiz = qf.OpenFile();
 
@@ -123,67 +100,62 @@ namespace Quiz
 
         private void answerButton_Click(object sender, EventArgs e)
         {
-            //-----Make sure the answer selected is correct.-----
-            //Loop through each of the questions, and check to see if the correct answers were chosen.
-            for (int i = 0; i < 4; i++)
-            {
-                //Check what the user selected against what is actually correct
-                if (checkBoxes[i].Checked && q[currentQuestionNumber].answers[i].isanswer)
+                //-----Make sure the answer selected is correct.-----
+                //Loop through each of the questions, and check to see if the correct answers were chosen.
+                for (int i = 0; i < 4; i++)
                 {
-                    correctAnswers++;
+                    //Check what the user selected against what is actually correct
+                    if (checkBoxes[i].Checked && q[currentQuestionNumber].answers[i].isanswer)
+                    {
+                        correctAnswers++;
+                    }
                 }
-            }
 
-            if (correctAnswers == setCorrectAnswers)
-            {
-                realCorrectAnswers++;
-                label1.Text = realCorrectAnswers.ToString();
-            }
-
-            //Set the question to have been correctly answered, if the user answered correctly.
-            if (correctAnswers == setCorrectAnswers)
-            {
-                q[currentQuestionNumber].wasAnsweredCorrectly = true;
-            }
-            else
-            {
-                q[currentQuestionNumber].wasAnsweredCorrectly = false;
-            }
-            //---------------------------------------------------
-
-            setCorrectAnswers = 0;
-            correctAnswers = 0;
-
-            //Set which question to be loaded
-            currentQuestionNumber++;
-            question = q[currentQuestionNumber];
-
-            //The question
-            questionLabel.Text = question.questiontext;
-
-            for (int i = 0; i < 4; i++)
-            {
-                checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
-            }
-
-            //Loops through and ensures that the program knows how many correct answers there are.
-            foreach (Answer answer in q[currentQuestionNumber].answers)
-            {
-                if (answer.isanswer)
+                if (correctAnswers == setCorrectAnswers)
                 {
-                    setCorrectAnswers += 1;
+                    realCorrectAnswers++;
+                    label1.Text = realCorrectAnswers.ToString();
                 }
+
+                //Set the question to have been correctly answered, if the user answered correctly.
+                if (correctAnswers == setCorrectAnswers)
+                {
+                    q[currentQuestionNumber].wasAnsweredCorrectly = true;
+                }
+                else
+                {
+                    q[currentQuestionNumber].wasAnsweredCorrectly = false;
+                }
+                //---------------------------------------------------
+
+                setCorrectAnswers = 0;
+                correctAnswers = 0;
+
+                //Set which question to be loaded
+                currentQuestionNumber++;
+                question = q[currentQuestionNumber];
+
+                //The question
+                questionLabel.Text = question.questiontext;
+
+                for (int i = 0; i < 4; i++)
+                {
+                    checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
+                }
+
+                //Loops through and ensures that the program knows how many correct answers there are.
+                foreach (Answer answer in q[currentQuestionNumber].answers)
+                {
+                    if (answer.isanswer)
+                    {
+                        setCorrectAnswers += 1;
+                    }
+                }
+
+                checkBoxes[0].Checked = false;
+                checkBoxes[1].Checked = false;
+                checkBoxes[2].Checked = false;
+                checkBoxes[3].Checked = false;
             }
-
-            checkBoxes[0].Checked = false;
-            checkBoxes[1].Checked = false;
-            checkBoxes[2].Checked = false;
-            checkBoxes[3].Checked = false;
-        }
-
-        private void NextBtn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 } 

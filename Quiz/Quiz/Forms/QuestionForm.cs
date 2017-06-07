@@ -111,9 +111,13 @@ namespace Quiz
                     }
                 }
 
-                if (correctAnswers == setCorrectAnswers)
+                if (correctAnswers == setCorrectAnswers && !q[currentQuestionNumber].wasAnsweredCorrectly/*This last part makes sure that the student cannot go back to a question that they already asnwered correctly and get more 'correct answers' b/c of it.*/)
                 {
                     realCorrectAnswers++;
+                    label1.Text = realCorrectAnswers.ToString();
+                } else if (q[currentQuestionNumber].wasAnsweredCorrectly && correctAnswers != setCorrectAnswers)
+                {
+                    realCorrectAnswers--;
                     label1.Text = realCorrectAnswers.ToString();
                 }
 
@@ -157,5 +161,88 @@ namespace Quiz
                 checkBoxes[2].Checked = false;
                 checkBoxes[3].Checked = false;
             }
+
+        private void PreviousBtn_Click(object sender, EventArgs e)
+        {
+            try {
+
+                //setCorrectAnswers = 0;
+                //correctAnswers = 0;
+
+                //Set which question to be loaded
+                currentQuestionNumber--;
+                question = q[currentQuestionNumber];
+
+                //The question
+                questionLabel.Text = question.questiontext;
+
+                for (int i = 0; i < 4; i++)
+                {
+                    checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
+                }
+
+                checkBoxes[0].Checked = false;
+                checkBoxes[1].Checked = false;
+                checkBoxes[2].Checked = false;
+                checkBoxes[3].Checked = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cannot go lower than question 1");
+                //Set which question to be loaded
+                currentQuestionNumber = 0; //Ensure that the program never tries to load lower than the count number.
+                question = q[currentQuestionNumber];
+
+                //The question
+                questionLabel.Text = question.questiontext;
+
+                for (int i = 0; i < 4; i++)
+                {
+                    checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
+                }
+            }
+        }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                //setCorrectAnswers = 0;
+                //correctAnswers = 0;
+
+                //Set which question to be loaded
+                currentQuestionNumber++;
+                question = q[currentQuestionNumber];
+
+                //The question
+                questionLabel.Text = question.questiontext;
+
+                for (int i = 0; i < 4; i++)
+                {
+                    checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
+                }
+
+                checkBoxes[0].Checked = false;
+                checkBoxes[1].Checked = false;
+                checkBoxes[2].Checked = false;
+                checkBoxes[3].Checked = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cannot go higher than the final question");
+                //Set which question to be loaded
+                currentQuestionNumber = q.Count - 1; //Ensure that the program never tries to load higher than the count number.
+                question = q[currentQuestionNumber];
+
+                //The question
+                questionLabel.Text = question.questiontext;
+
+                for (int i = 0; i < 4; i++)
+                {
+                    checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
+                }
+            }
+        }
     }
 } 

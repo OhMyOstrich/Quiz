@@ -131,6 +131,7 @@
             this.PreviousBtn.TabIndex = 4;
             this.PreviousBtn.Text = "Prev";
             this.PreviousBtn.UseVisualStyleBackColor = true;
+            this.PreviousBtn.Click += new System.EventHandler(this.PreviousBtn_Click);
             // 
             // NextBtn
             // 
@@ -141,6 +142,7 @@
             this.NextBtn.TabIndex = 5;
             this.NextBtn.Text = "Next";
             this.NextBtn.UseVisualStyleBackColor = true;
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
             // QuestionForm
             // 

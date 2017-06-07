@@ -21,7 +21,7 @@ namespace Quiz.Forms
         {
             InitializeComponent();
             quiz = Stuff.currentquiz;
-            scoreTxt = numCorrect + " / " + quiz.numofquestions + "  " + numCorrect / quiz.numofquestions + "%";
+            scoreTxt = numCorrect + " / " + quiz.numofquestions + "  " + 100*(numCorrect / quiz.numofquestions) + "%";
         }
 
         private void ScoreForm_Load(object sender, EventArgs e)
@@ -34,8 +34,6 @@ namespace Quiz.Forms
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 form = new Form1();
-            form.Show();
         }
 
         private void SaveReport_Click(object sender, EventArgs e)
@@ -77,7 +75,7 @@ namespace Quiz.Forms
                 }
             }
 
-            File.SetAttributes(saver.FileName, FileAttributes.Hidden);
+            File.SetAttributes(saver.FileName, FileAttributes.ReadOnly);
 
         }
     }

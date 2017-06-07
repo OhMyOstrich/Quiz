@@ -102,46 +102,43 @@ namespace Quiz
             //-----Make sure the answer selected is correct.-----
             //Loop through each of the questions, and check to see if the correct answers were chosen.
 
-            for (int i = 0; i < 4; i++)
+            realCorrectAnswers = 0;
+
+            for (int b = 0; b < q.Count; b++)
             {
-                if (checkBoxes[i].Checked)
+
+                setCorrectAnswers = 0;
+                correctAnswers = 0;
+
+                foreach (Answer answer in q[b].answers)
                 {
-                    q[currentQuestionNumber].checkBoxSelected = i;
-                    q[currentQuestionNumber].questionAnswered = true;
+                    if (answer.isanswer)
+                    {
+                        setCorrectAnswers += 1;
+                    }
                 }
-                //Check what the user selected against what is actually correct
-                if (checkBoxes[i].Checked && q[currentQuestionNumber].answers[i].isanswer)
+
+                for (int i = 0; i < 4; i++)
                 {
-                    correctAnswers++;
+                    //Check what the user selected against what is actually correct
+                    if (q[b].checkBoxSelected == i && q[b].answers[i].isanswer)
+                    {
+                        correctAnswers++;
+                    }
                 }
-            }
 
-            if (correctAnswers == setCorrectAnswers && !q[currentQuestionNumber].wasAnsweredCorrectly/*This last part makes sure that the student cannot go back to a question that they already asnwered correctly and get more 'correct answers' b/c of it.*/)
-            {
-                realCorrectAnswers++;
-                label1.Text = realCorrectAnswers.ToString();
+                //Set the question to have been correctly answered, if the user answered correctly.
+                if (correctAnswers == setCorrectAnswers)
+                {
+                    q[b].wasAnsweredCorrectly = true;
+                    realCorrectAnswers++;
+                }
+                else
+                {
+                    q[b].wasAnsweredCorrectly = false;
+                }
+                //---------------------------------------------------
             }
-            else if (q[currentQuestionNumber].wasAnsweredCorrectly && correctAnswers != setCorrectAnswers)
-            {
-                realCorrectAnswers--;
-                label1.Text = realCorrectAnswers.ToString();
-            }
-
-            //Set the question to have been correctly answered, if the user answered correctly.
-            if (correctAnswers == setCorrectAnswers)
-            {
-                q[currentQuestionNumber].wasAnsweredCorrectly = true;
-            }
-            else
-            {
-                q[currentQuestionNumber].wasAnsweredCorrectly = false;
-            }
-            //---------------------------------------------------
-
-            setCorrectAnswers = 0;
-            correctAnswers = 0;
-
-            //Set which question to be loaded
 
             if (currentQuestionNumber + 1 == main.numofquestions)
             {
@@ -155,38 +152,7 @@ namespace Quiz
                 question = q[currentQuestionNumber];
             }
 
-
-            //this.Text = "Question: " + (currentQuestionNumber + 1); //Display which question the user is on
-
-            //The question
-            questionBox.Text = question.questiontext;
-
-            for (int i = 0; i < 4; i++)
-            {
-                checkBoxes[i].Text = q[currentQuestionNumber].answers[i].answertext;
-
-                if (q[currentQuestionNumber].questionAnswered && q[currentQuestionNumber].checkBoxSelected == i)
-                {
-                    checkBoxes[i].Checked = true;
-                }
-                else
-                {
-                    checkBoxes[i].Checked = false;
-                }
-            }
-
-            //Loops through and ensures that the program knows how many correct answers there are.
-
-            foreach (Answer answer in q[currentQuestionNumber].answers)
-                    {
-                        if (answer.isanswer)
-                        {
-                            setCorrectAnswers += 1;
-                        }
-                    }
-                
-                
-            }
+        }
 
         private void PreviousBtn_Click(object sender, EventArgs e)
         {

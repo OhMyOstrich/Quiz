@@ -32,6 +32,8 @@ namespace Quiz {
         public bool wasAnsweredCorrectly { get; set; }
         public string questiontext { get; set; }
         public List<Answer> answers { get; set; }
+        public int checkBoxSelected { get; set; }
+        public bool questionAnswered { get; set; }
 
         public override string ToString() {
             //string ans = "";

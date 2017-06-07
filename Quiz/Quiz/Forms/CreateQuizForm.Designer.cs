@@ -53,10 +53,10 @@
             // 
             // FinishButton
             // 
-            this.FinishButton.Location = new System.Drawing.Point(433, 646);
+            this.FinishButton.Location = new System.Drawing.Point(380, 646);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(75, 23);
-            this.FinishButton.TabIndex = 14;
+            this.FinishButton.TabIndex = 15;
             this.FinishButton.Text = "Finish";
             this.FinishButton.UseVisualStyleBackColor = true;
             this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
@@ -93,7 +93,7 @@
             this.AddButton.Location = new System.Drawing.Point(20, 646);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
-            this.AddButton.TabIndex = 11;
+            this.AddButton.TabIndex = 12;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -103,7 +103,7 @@
             this.DeleteButton.Location = new System.Drawing.Point(127, 646);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.DeleteButton.TabIndex = 12;
+            this.DeleteButton.TabIndex = 13;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -113,7 +113,7 @@
             this.CountButton.Location = new System.Drawing.Point(234, 646);
             this.CountButton.Name = "CountButton";
             this.CountButton.Size = new System.Drawing.Size(75, 23);
-            this.CountButton.TabIndex = 13;
+            this.CountButton.TabIndex = 14;
             this.CountButton.Text = "Count";
             this.CountButton.UseVisualStyleBackColor = true;
             this.CountButton.Click += new System.EventHandler(this.button3_Click);
@@ -124,7 +124,7 @@
             this.QuestionsListBox.Location = new System.Drawing.Point(380, 10);
             this.QuestionsListBox.Name = "QuestionsListBox";
             this.QuestionsListBox.Size = new System.Drawing.Size(416, 602);
-            this.QuestionsListBox.TabIndex = 15;
+            this.QuestionsListBox.TabIndex = 11;
             // 
             // richTextBox1
             // 

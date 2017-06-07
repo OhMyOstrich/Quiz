@@ -27,11 +27,10 @@ namespace Quiz {
         {
             string obj = name + " " + subject + " ";
             string qs = "";
-            foreach(Question q in questions)
-            {
+            foreach (Question q in questions) {
                 qs = qs + q;
             }
-            
+
             return obj + qs;
         }
 

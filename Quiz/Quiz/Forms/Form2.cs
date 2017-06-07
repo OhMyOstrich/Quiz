@@ -154,6 +154,9 @@ namespace Quiz
             question = q[currentQuestionNumber];
 
             //The question
+            //int temp = question.questiontext.IndexOf(" Cc");
+            //string temp1 = question.questiontext.Remove(temp);
+            //questionLabel.Text = temp1;
             questionLabel.Text = question.questiontext;
 
             for (int i = 0; i < 4; i++)

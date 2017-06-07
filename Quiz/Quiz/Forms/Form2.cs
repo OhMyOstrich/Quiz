@@ -45,9 +45,10 @@ namespace Quiz
             InitializeComponent();
         }
 
-        private void CreateQuizWindow(QuizObject quiz)
-        {
+        private void CreateQuizWindow(QuizObject quiz) {
+            this.Hide();
             Quiz form = new Quiz();
+            form.FormClosed += (s, args) => this.Close();
             form.Show();
         }
 
@@ -73,10 +74,8 @@ namespace Quiz
         }
 
         //Set the Labels and QuestionBoxes set to the question put into the load function.
-        private void QuestionForm_Load(object sender, EventArgs e)
-        {
-            try
-            {
+        private void QuestionForm_Load(object sender, EventArgs e) {
+            try {
                 QuizFile qf = new QuizFile();
                 Stuff.currentquiz = qf.OpenFile();
 

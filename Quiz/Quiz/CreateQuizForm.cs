@@ -22,36 +22,66 @@ namespace Quiz {
                 temp.questions.Add(x);
             }
 
-            //for (int i = 0; i < poop.; i++) {
-            //    Question q = new Question { questiontext = QuestionsListBox.Items[0].};
-            //    temp.questions.Add(QuestionsListBox.Items[i]);
-            //}
-
             QuizFile file = new QuizFile(temp);
             file.CreateFile();
+            MessageBox.Show("Quiz successfully created", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button3_Click(object sender, EventArgs e) {
             if (QuestionsListBox.Items.Count == 0 || QuestionsListBox.Items.Count > 1) {
-                MessageBox.Show("There are " + QuestionsListBox.Items.Count + " questions in this quiz", "Question Counted");
+                MessageBox.Show("There are " + QuestionsListBox.Items.Count + " questions in this quiz", "Question Counted", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } else {
-                MessageBox.Show("There is " + QuestionsListBox.Items.Count + " question in this quiz", "Question Counted");
+                MessageBox.Show("There is " + QuestionsListBox.Items.Count + " question in this quiz", "Question Counted", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
 
         private void AddButton_Click(object sender, EventArgs e) {
+            if (richTextBox1.Text.Trim() == "") {
+                MessageBox.Show("Question Text cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             List<Answer> temp = new List<Answer>();
             temp.Add(new Answer { answertext = Answer1Box.Text, isanswer = Answer1Check.Checked });
             temp.Add(new Answer { answertext = Answer2Box.Text, isanswer = Answer2Check.Checked });
             temp.Add(new Answer { answertext = Answer3Box.Text, isanswer = Answer3Check.Checked });
             temp.Add(new Answer { answertext = Answer4Box.Text, isanswer = Answer4Check.Checked });
-
             QuestionsListBox.Items.Add(new Question { questiontext = richTextBox1.Text, answers = temp});
+            ClearCheckBoxes();
+            ClearTextBoxes();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e) {
             QuestionsListBox.Items.Remove(QuestionsListBox.SelectedItem);
+        }
+
+        private void ClearTextBoxes() {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is RichTextBox)
+                        (control as RichTextBox).Clear();
+                    else
+                        func(control.Controls);
+            };
+
+            func(Controls);
+        }
+
+        private void ClearCheckBoxes() {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) => {
+                foreach (Control control in controls)
+                    if (control is CheckBox)
+                        (control as CheckBox).Checked = false;
+                    else
+                        func(control.Controls);
+            };
+
+            func(Controls);
         }
     }
 }

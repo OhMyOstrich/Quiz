@@ -23,12 +23,11 @@ namespace Quiz {
         public int numofquestions { get; set; }
         public virtual List<Question> questions { get; set; }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             string obj = name + " " + subject + " ";
             string qs = "";
-            foreach(Question q in questions)
-            {
+
+            foreach(Question q in questions) {
                 qs = qs + q;
             }
             
@@ -46,12 +45,11 @@ namespace Quiz {
         public List<Answer> answers { get; set; }
 
         public override string ToString() {
-            string ans = "";
-            foreach(Answer a in answers)
-            {
-                ans = ans + a + " " + ": " + a.isanswer;
-            }
-            return questiontext + " " + ans;
+            //string ans = "";
+            //foreach(Answer a in answers) {
+            //    ans = ans + a + " " + ": " + a.isanswer;
+            //}
+            return questiontext;// + " " + ans;
         }
     }
 
@@ -60,8 +58,8 @@ namespace Quiz {
         public int ID { get; set; }
         public string answertext { get; set; }
         public bool isanswer { get; set; }
-        public override string ToString()
-        {
+
+        public override string ToString() {
             return answertext;
         }
     }

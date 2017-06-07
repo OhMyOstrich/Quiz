@@ -19,10 +19,14 @@ namespace Quiz
             
         }
 
+        private void Form1_Load(object sender, EventArgs e) {
+
+        }
+
         private void button1_Click(object sender, EventArgs e) {
             this.Hide();
             CreateQuizForm form = new CreateQuizForm();
-            form.FormClosed += (s, args) => this.Close();
+            form.FormClosed += (s, args) => this.Show();
             form.Show();
         }
 
@@ -34,10 +38,7 @@ namespace Quiz
             form.Show();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void TempQuestionButton_Click(object sender, EventArgs e)
         {

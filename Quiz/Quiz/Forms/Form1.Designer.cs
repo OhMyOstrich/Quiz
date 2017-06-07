@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.TempQuestionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -66,16 +65,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // TempQuestionButton
-            // 
-            this.TempQuestionButton.Location = new System.Drawing.Point(0, 288);
-            this.TempQuestionButton.Name = "TempQuestionButton";
-            this.TempQuestionButton.Size = new System.Drawing.Size(426, 71);
-            this.TempQuestionButton.TabIndex = 2;
-            this.TempQuestionButton.Text = "Question?";
-            this.TempQuestionButton.UseVisualStyleBackColor = true;
-            this.TempQuestionButton.Click += new System.EventHandler(this.TempQuestionButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -83,7 +72,6 @@
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(426, 402);
-            this.Controls.Add(this.TempQuestionButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -108,7 +96,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button TempQuestionButton;
     }
 }
 

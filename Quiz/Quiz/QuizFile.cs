@@ -25,7 +25,7 @@ namespace Quiz {
         }
 
         private int colonIndex = 2;
-        char colon;
+        char colon = new char();
 
         public void CreateFile() {
             SaveFileDialog saver = new SaveFileDialog();
@@ -71,7 +71,7 @@ namespace Quiz {
 
                     while (reader.Peek() > 0) {
                         Question quest = new Question();
-                       // colon = ':';
+                        //colon = ':';
                         //colonIndex = quest.questiontext.IndexOf(colon);
                         quest.questiontext = reader.ReadLine().Remove(0, colonIndex);
                         quest.answers = new List<Answer>();

@@ -58,6 +58,7 @@ namespace Quiz
             try {
                 QuizFile qf = new QuizFile();
                 Stuff.currentquiz = qf.OpenFile();
+                main = Stuff.currentquiz;
 
                 foreach (Question question in Stuff.currentquiz.questions)
                 {
@@ -136,8 +137,17 @@ namespace Quiz
                 correctAnswers = 0;
 
                 //Set which question to be loaded
+                if(currentQuestionNumber+1 == main.numofquestions)
+                {
+                Forms.ScoreForm score = new Forms.ScoreForm(realCorrectAnswers);
+                score.Show();
+                }
+                else
+                {
                 currentQuestionNumber++;
                 question = q[currentQuestionNumber];
+                }
+
 
                 //The question
                 questionLabel.Text = question.questiontext;

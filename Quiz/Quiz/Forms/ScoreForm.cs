@@ -1,4 +1,6 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +16,6 @@ namespace Quiz.Forms
     public partial class ScoreForm : Form
     {
         private QuizObject quiz;
-        private int numCorrect;
         private string scoreTxt;
 
         public ScoreForm(int numCorrect)
@@ -39,45 +40,47 @@ namespace Quiz.Forms
 
         private void SaveReport_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saver = new SaveFileDialog();
-            saver.Filter = "Text files (*.txt)|*.txt";
-            saver.FilterIndex = 1;
+            CreatePdf();
+        }
 
-            if (saver.ShowDialog() == DialogResult.OK)
+        public void CreatePdf()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Pdf File |*.pdf";
+            if (sfd.ShowDialog() == DialogResult.OK)
             {
-                Stream FileStream = saver.OpenFile();
+                Stream stream = sfd.OpenFile();
 
-                using (StreamWriter writer = new StreamWriter(FileStream))
+                using (Document document = new Document())
                 {
-                    writer.WriteLine(quiz.name);
-                    writer.WriteLine(quiz.subject);
-                    writer.WriteLine(scoreTxt);
+                    PdfWriter.GetInstance(document, stream);
+                    document.Open();
+                    document.Add(new Paragraph(quiz.name));
+                    document.Add(new Paragraph(quiz.subject));
+                    document.Add(new Paragraph(scoreTxt));
 
-                    foreach(Question q in quiz.questions)
+                    foreach (Question q in quiz.questions)
                     {
-                        writer.WriteLine();
-                        writer.WriteLine(q.questiontext);
+                        document.Add(new Paragraph());
+                        document.Add(new Paragraph(q.questiontext));
                         if (q.wasAnsweredCorrectly)
                         {
-                            writer.WriteLine("Correct");
+                            document.Add(new Paragraph("Correct"));
                         }
                         else
                         {
-                            writer.WriteLine("Incorrect");
-                            foreach(Answer a in q.answers)
+                            document.Add(new Paragraph("Incorrect"));
+                            foreach (Answer a in q.answers)
                             {
                                 if (a.isanswer)
                                 {
-                                    writer.WriteLine("The correct answer is " + a.answertext);
+                                    document.Add(new Paragraph("The correct answer is " + a.answertext));
                                 }
                             }
                         }
                     }
                 }
             }
-
-            File.SetAttributes(saver.FileName, FileAttributes.ReadOnly);
-
         }
     }
     

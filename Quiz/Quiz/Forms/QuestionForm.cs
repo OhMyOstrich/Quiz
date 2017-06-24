@@ -99,54 +99,30 @@ namespace Quiz
 
         private void answerButton_Click(object sender, EventArgs e)
         {
-            //-----Make sure the answer selected is correct.-----
-            //Loop through each of the questions, and check to see if the correct answers were chosen.
-
-            realCorrectAnswers = 0;
-
-            for (int b = 0; b < q.Count; b++)
+            //-----These next lines make sure that the program counts the final question.-----
+            for (int i = 0; i < 4; i++)
             {
-
-                setCorrectAnswers = 0;
-                correctAnswers = 0;
-
-                foreach (Answer answer in q[b].answers)
+                if (checkBoxes[i].Checked)
                 {
-                    if (answer.isanswer)
-                    {
-                        setCorrectAnswers += 1;
-                    }
+                    q[q.Count - 1].checkBoxSelected = i;
+                    q[q.Count - 1].questionAnswered = true;
                 }
-
-                for (int i = 0; i < 4; i++)
-                {
-
-                    //foreach (var x in q[b].answers) {
-                    //    if (x.isanswer) {
-                    //        if (q[b].checkBoxSelected == )
-                    //    }
-                    //}
-
-                    //Check what the user selected against what is actually correct
-                    if (q[b].checkBoxSelected == i && q[b].answers[i].isanswer)
-                    {
-                        correctAnswers++;
-                    }
-                }
-
-                //Set the question to have been correctly answered, if the user answered correctly.
-                if (correctAnswers == setCorrectAnswers)
-                {
-                    q[b].wasAnsweredCorrectly = true;
-                    realCorrectAnswers++;
-                }
-                else
-                {
-                    q[b].wasAnsweredCorrectly = false;
-                }
-                //---------------------------------------------------
             }
+            //----------------------------------------------------------------------------------
+            //Loop through each of the questions, and check to see if the correct answers were chosen.
+            foreach (Question que in q)
+            {
+                int correctAnswerIndex = 0;
 
+                for(int i = 0; i < que.answers.Count; i++)
+                {
+                    if (que.answers[i].isanswer)
+                        correctAnswerIndex = i;
+                }
+
+                if (que.checkBoxSelected == correctAnswerIndex && que.questionAnswered)
+                    realCorrectAnswers++;
+            }
             if (currentQuestionNumber + 1 == main.numofquestions)
             {
                 Forms.ScoreForm score = new Forms.ScoreForm(realCorrectAnswers);
@@ -219,7 +195,6 @@ namespace Quiz
         {
             try
             {
-                
                 for (int i = 0; i < 4; i++)
                 {
                     if (checkBoxes[i].Checked)
@@ -228,7 +203,6 @@ namespace Quiz
                         q[currentQuestionNumber].questionAnswered = true;
                     }
                 }
-
                 //Set which question to be loaded
                 currentQuestionNumber++;
                 question = q[currentQuestionNumber];

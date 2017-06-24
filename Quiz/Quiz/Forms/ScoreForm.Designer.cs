@@ -65,7 +65,7 @@
             this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Score Report";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ScoreLabel
             // 
@@ -87,7 +87,7 @@
             this.QuizTitle.Size = new System.Drawing.Size(84, 20);
             this.QuizTitle.TabIndex = 4;
             this.QuizTitle.Text = "Quiz Title";
-            this.QuizTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.QuizTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ScoreForm
             // 

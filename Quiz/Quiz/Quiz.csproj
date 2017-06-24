@@ -126,7 +126,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CheneySD.ico" />
-    <Content Include="Jacob%27s Stuff.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

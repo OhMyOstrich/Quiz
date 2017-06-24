@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Quiz {
 
+    //Defines QuizObject with an ID, name, subject, number of questions, and a list of questions
     public class QuizObject {
         public int ID { get; set; }
         public string name { get; set; }
@@ -36,11 +37,7 @@ namespace Quiz {
         public bool questionAnswered { get; set; }
 
         public override string ToString() {
-            //string ans = "";
-            //foreach(Answer a in answers) {
-            //    ans = ans + a + " " + ": " + a.isanswer;
-            //}
-            return questiontext;// + " " + ans;
+            return questiontext;
         }
     }
 

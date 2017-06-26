@@ -52,6 +52,7 @@ namespace Quiz
         //Set the Labels and QuestionBoxes set to the question put into the load function.
         private void QuestionForm_Load(object sender, EventArgs e) {
             try {
+                realCorrectAnswers = 0;
                 QuizFile qf = new QuizFile();
                 Stuff.currentquiz = qf.OpenFile();
                 main = Stuff.currentquiz;
@@ -99,6 +100,7 @@ namespace Quiz
 
         private void answerButton_Click(object sender, EventArgs e)
         {
+            realCorrectAnswers = 0;
             //-----These next lines make sure that the program counts the final question.-----
             for (int i = 0; i < 4; i++)
             {
@@ -112,15 +114,15 @@ namespace Quiz
             //Loop through each of the questions, and check to see if the correct answers were chosen.
             foreach (Question que in q)
             {
-                int correctAnswerIndex = 0;
+                int correctAnswerIndex = que.answers.Count + 5;
 
-                for(int i = 0; i < que.answers.Count; i++)
+                for(int i = 0; i < 4; i++)
                 {
                     if (que.answers[i].isanswer)
                         correctAnswerIndex = i;
                 }
 
-                if (que.checkBoxSelected == correctAnswerIndex && que.questionAnswered)
+                if ((que.checkBoxSelected == correctAnswerIndex) && que.questionAnswered)
                     realCorrectAnswers++;
             }
             if (currentQuestionNumber + 1 == main.numofquestions)
@@ -251,4 +253,4 @@ namespace Quiz
 
         
     }
-} 
+}

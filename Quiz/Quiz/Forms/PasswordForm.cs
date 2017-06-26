@@ -25,9 +25,9 @@ namespace Quiz.Forms {
                     x += y;
                 }
 
-                if (x == Stuff.pass) {
+                if (x == GlobalVariables.pass) {
                     Console.WriteLine("textbox " + sha.ComputeHash(Encoding.UTF8.GetBytes(textBox1.Text)).ToString());
-                    Console.WriteLine("Stuff.pass " + Stuff.pass);
+                    Console.WriteLine("Stuff.pass " + GlobalVariables.pass);
                     this.Hide();
                     CreateQuizForm form = new CreateQuizForm();
                     form.FormClosed += (s, args) => this.Close();

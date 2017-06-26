@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Quiz {
-    static class Stuff {
+    static class GlobalVariables {
         public static QuizObject currentquiz;
         public static string pass;
     }

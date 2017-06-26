@@ -21,7 +21,7 @@ namespace Quiz.Forms
         public ScoreForm(int numCorrect)
         {
             InitializeComponent();
-            quiz = Stuff.currentquiz;
+            quiz = GlobalVariables.currentquiz;
             scoreTxt = numCorrect + " / " + quiz.numofquestions + "  " + 100*((float)numCorrect / (float)quiz.numofquestions) + "%";
             Console.Write(numCorrect);
         }

@@ -54,12 +54,12 @@ namespace Quiz
             try {
                 realCorrectAnswers = 0;
                 QuizFile qf = new QuizFile();
-                Stuff.currentquiz = qf.OpenFile();
-                main = Stuff.currentquiz;
+                GlobalVariables.currentquiz = qf.OpenFile();
+                main = GlobalVariables.currentquiz;
 
                 this.Text = "Question: 1"; //Display which question the user is on
 
-                foreach (Question question in Stuff.currentquiz.questions)
+                foreach (Question question in GlobalVariables.currentquiz.questions)
                 {
                     q.Add(question);
                 }

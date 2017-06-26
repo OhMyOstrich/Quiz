@@ -27,7 +27,7 @@ namespace Quiz
                 hash = sha.ComputeHash(Encoding.UTF8.GetBytes("cheneysd"));
             }
             foreach (var y in hash) {
-                Stuff.pass += y;
+                GlobalVariables.pass += y;
             }
     }
 

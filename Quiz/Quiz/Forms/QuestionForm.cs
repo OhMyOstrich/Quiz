@@ -123,7 +123,10 @@ namespace Quiz
                 }
 
                 if ((que.checkBoxSelected == correctAnswerIndex) && que.questionAnswered)
+                {
                     realCorrectAnswers++;
+                    que.wasAnsweredCorrectly = true;
+                }
             }
             if (currentQuestionNumber + 1 == main.numofquestions)
             {

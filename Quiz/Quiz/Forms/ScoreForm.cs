@@ -53,6 +53,7 @@ namespace Quiz.Forms
 
                 using (Document document = new Document())
                 {
+                    int count = 1;
                     PdfWriter.GetInstance(document, stream);
                     document.Open();
                     document.Add(new Paragraph(quiz.name));
@@ -61,8 +62,8 @@ namespace Quiz.Forms
 
                     foreach (Question q in quiz.questions)
                     {
-                        document.Add(new Paragraph());
-                        document.Add(new Paragraph(q.questiontext));
+                        document.Add(new Paragraph("\n"));
+                        document.Add(new Paragraph(count + ":" + q.questiontext));
                         if (q.wasAnsweredCorrectly)
                         {
                             document.Add(new Paragraph("Correct"));
@@ -78,6 +79,8 @@ namespace Quiz.Forms
                                 }
                             }
                         }
+
+                        count++;
                     }
                 }
             }

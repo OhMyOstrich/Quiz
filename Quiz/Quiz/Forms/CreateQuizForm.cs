@@ -92,5 +92,15 @@ namespace Quiz {
 
             func(Controls);
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Answer2Check_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateQuizForm));
             this.QuizNameTB = new System.Windows.Forms.MaskedTextBox();
             this.FinishButton = new System.Windows.Forms.Button();
             this.QuizSubjectTB = new System.Windows.Forms.MaskedTextBox();
@@ -46,19 +47,23 @@
             // 
             // QuizNameTB
             // 
-            this.QuizNameTB.Location = new System.Drawing.Point(103, 23);
+            this.QuizNameTB.Location = new System.Drawing.Point(103, 27);
             this.QuizNameTB.Name = "QuizNameTB";
             this.QuizNameTB.Size = new System.Drawing.Size(237, 20);
             this.QuizNameTB.TabIndex = 0;
             // 
             // FinishButton
             // 
-            this.FinishButton.Location = new System.Drawing.Point(380, 646);
+            this.FinishButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.FinishButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.FinishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinishButton.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinishButton.Location = new System.Drawing.Point(706, 640);
             this.FinishButton.Name = "FinishButton";
-            this.FinishButton.Size = new System.Drawing.Size(75, 23);
+            this.FinishButton.Size = new System.Drawing.Size(90, 29);
             this.FinishButton.TabIndex = 15;
             this.FinishButton.Text = "Finish";
-            this.FinishButton.UseVisualStyleBackColor = true;
+            this.FinishButton.UseVisualStyleBackColor = false;
             this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
             // 
             // QuizSubjectTB
@@ -71,67 +76,80 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 23);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 15);
+            this.label1.Size = new System.Drawing.Size(69, 14);
             this.label1.TabIndex = 5;
             this.label1.Text = "Quiz Name:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 51);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 15);
+            this.label3.Size = new System.Drawing.Size(80, 14);
             this.label3.TabIndex = 7;
             this.label3.Text = "Quiz Subject:";
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(20, 646);
+            this.AddButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.AddButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Location = new System.Drawing.Point(18, 646);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 12;
             this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(127, 646);
+            this.DeleteButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.DeleteButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.Location = new System.Drawing.Point(99, 646);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton.Size = new System.Drawing.Size(76, 23);
             this.DeleteButton.TabIndex = 13;
             this.DeleteButton.Text = "Delete";
-            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.UseVisualStyleBackColor = false;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // CountButton
             // 
-            this.CountButton.Location = new System.Drawing.Point(234, 646);
+            this.CountButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CountButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.CountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CountButton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountButton.Location = new System.Drawing.Point(181, 646);
             this.CountButton.Name = "CountButton";
             this.CountButton.Size = new System.Drawing.Size(75, 23);
             this.CountButton.TabIndex = 14;
             this.CountButton.Text = "Count";
-            this.CountButton.UseVisualStyleBackColor = true;
+            this.CountButton.UseVisualStyleBackColor = false;
             this.CountButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // QuestionsListBox
             // 
+            this.QuestionsListBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestionsListBox.FormattingEnabled = true;
-            this.QuestionsListBox.Location = new System.Drawing.Point(380, 10);
+            this.QuestionsListBox.Location = new System.Drawing.Point(380, 27);
             this.QuestionsListBox.Name = "QuestionsListBox";
-            this.QuestionsListBox.Size = new System.Drawing.Size(416, 602);
+            this.QuestionsListBox.Size = new System.Drawing.Size(416, 589);
             this.QuestionsListBox.TabIndex = 11;
             // 
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(29, 102);
+            this.richTextBox1.Location = new System.Drawing.Point(20, 103);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(311, 102);
+            this.richTextBox1.Size = new System.Drawing.Size(320, 101);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
@@ -170,19 +188,21 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 83);
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 86);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 15);
+            this.label7.Size = new System.Drawing.Size(60, 14);
             this.label7.TabIndex = 25;
-            this.label7.Text = "Question Text:";
+            this.label7.Text = "Question:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Answer1Check
             // 
             this.Answer1Check.AutoSize = true;
-            this.Answer1Check.Location = new System.Drawing.Point(20, 218);
+            this.Answer1Check.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Answer1Check.Location = new System.Drawing.Point(18, 218);
             this.Answer1Check.Name = "Answer1Check";
-            this.Answer1Check.Size = new System.Drawing.Size(73, 17);
+            this.Answer1Check.Size = new System.Drawing.Size(75, 17);
             this.Answer1Check.TabIndex = 3;
             this.Answer1Check.Text = "Answer 1:";
             this.Answer1Check.UseVisualStyleBackColor = true;
@@ -190,19 +210,22 @@
             // Answer2Check
             // 
             this.Answer2Check.AutoSize = true;
-            this.Answer2Check.Location = new System.Drawing.Point(20, 323);
+            this.Answer2Check.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Answer2Check.Location = new System.Drawing.Point(18, 323);
             this.Answer2Check.Name = "Answer2Check";
-            this.Answer2Check.Size = new System.Drawing.Size(73, 17);
+            this.Answer2Check.Size = new System.Drawing.Size(75, 17);
             this.Answer2Check.TabIndex = 5;
             this.Answer2Check.Text = "Answer 2:";
             this.Answer2Check.UseVisualStyleBackColor = true;
+            this.Answer2Check.CheckedChanged += new System.EventHandler(this.Answer2Check_CheckedChanged);
             // 
             // Answer3Check
             // 
             this.Answer3Check.AutoSize = true;
-            this.Answer3Check.Location = new System.Drawing.Point(20, 428);
+            this.Answer3Check.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Answer3Check.Location = new System.Drawing.Point(18, 428);
             this.Answer3Check.Name = "Answer3Check";
-            this.Answer3Check.Size = new System.Drawing.Size(73, 17);
+            this.Answer3Check.Size = new System.Drawing.Size(75, 17);
             this.Answer3Check.TabIndex = 7;
             this.Answer3Check.Text = "Answer 3:";
             this.Answer3Check.UseVisualStyleBackColor = true;
@@ -210,9 +233,10 @@
             // Answer4Check
             // 
             this.Answer4Check.AutoSize = true;
-            this.Answer4Check.Location = new System.Drawing.Point(20, 533);
+            this.Answer4Check.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Answer4Check.Location = new System.Drawing.Point(18, 533);
             this.Answer4Check.Name = "Answer4Check";
-            this.Answer4Check.Size = new System.Drawing.Size(73, 17);
+            this.Answer4Check.Size = new System.Drawing.Size(75, 17);
             this.Answer4Check.TabIndex = 9;
             this.Answer4Check.Text = "Answer 4:";
             this.Answer4Check.UseVisualStyleBackColor = true;
@@ -242,6 +266,7 @@
             this.Controls.Add(this.FinishButton);
             this.Controls.Add(this.QuizNameTB);
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CreateQuizForm";

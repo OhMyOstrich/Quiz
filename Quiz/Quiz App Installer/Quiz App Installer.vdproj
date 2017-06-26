@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Quiz App Installer"
+"ProjectName" = "8:CSD Testing Installer"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -13,6 +13,12 @@
 "SccProvider" = "8:"
     "Hierarchy"
     {
+        "Entry"
+        {
+        "MsmKey" = "8:_28D1364578974AFB9E23CB00466A1D77"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
         "Entry"
         {
         "MsmKey" = "8:_6941C8DD309E4CED9DF58C03A9A251BD"
@@ -144,6 +150,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_28D1364578974AFB9E23CB00466A1D77"
+            {
+            "SourcePath" = "8:..\\Quiz\\CheneySD.ico"
+            "TargetName" = "8:CheneySD.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_9D90CE022A9C4FF99A5C72C52BBDA511"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_797ABB50139CC9E3DEB3A8CEB62A248F"
             {
             "AssemblyRegister" = "3:1"
@@ -284,9 +310,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:CSD Testing Testing Installer"
+        "ProductName" = "8:CSD Testing Installer"
         "ProductCode" = "8:{ECC2794B-34CB-4E27-BDBE-2B7F90738DD6}"
-        "PackageCode" = "8:{A9FEEDC3-9295-4C03-B618-13BFA39DC894}"
+        "PackageCode" = "8:{39C297F9-5521-4D0D-89ED-68F62FF2BA43}"
         "UpgradeCode" = "8:{AC58C875-7577-46C8-B509-39050964EC84}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -303,7 +329,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_28D1364578974AFB9E23CB00466A1D77"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
